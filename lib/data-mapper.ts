@@ -16,10 +16,10 @@ interface RefinedPropertyData {
   images: string[];
   ai?: {
     floorType?: string;
-    brightnessScore?: number;
-    facadeColor?: string;
+    brightness?: number;
+    exteriorColor?: string;
     kitchenColor?: string;
-    bathroomColor?: string;
+    bathroomTiles?: string;
     saunaType?: string;
   };
 }
@@ -48,7 +48,7 @@ export function mapRefinedDataToProperties(refinedData: RefinedPropertyData[]): 
     
     // Extract AI analysis data with fallbacks
     const aiData = item.ai || {};
-    const brightnessScore = aiData.brightnessScore || 0;
+    const brightnessScore = aiData.brightness || 0;
     const brightness = convertBrightnessScoreToLabel(brightnessScore);
     
     return {
@@ -62,9 +62,9 @@ export function mapRefinedDataToProperties(refinedData: RefinedPropertyData[]): 
       brightness: brightness ?? "Unbekannt",
       brightnessScore,
       floorType: aiData.floorType || "unknown",
-      exteriorColor: aiData.facadeColor || "unknown",
+      exteriorColor: aiData.exteriorColor || "unknown",
       kitchenColor: aiData.kitchenColor || "unknown",
-      bathroomTiles: aiData.bathroomColor || "unknown",
+      bathroomTiles: aiData.bathroomTiles || "unknown",
       saunaType: aiData.saunaType || "unknown",
     };
   });

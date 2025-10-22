@@ -104,7 +104,9 @@ export function PropertyListings() {
       try {
         const response = await fetch('/data_refined.json')
         const refinedData = await response.json()
+        console.log('Refined Data:', refinedData  )
         const mappedProperties = mapRefinedDataToProperties(refinedData)
+        console.log('Mapped Properties:', mappedProperties)
         setProperties(mappedProperties)
       } catch (error) {
         console.error('Error loading properties:', error)
@@ -689,7 +691,7 @@ export function PropertyListings() {
             <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative aspect-[4/3] overflow-hidden">
                 <img
-                  src={property.image || "/placeholder.svg"}
+                  src={property.image }
                   alt={property.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

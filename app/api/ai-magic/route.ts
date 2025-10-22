@@ -14,7 +14,7 @@ const CONCURRENCY = 3;
 
 // Modell und API-URL für Azure OpenAI
 const OPENAI_MODEL = "gpt-4o"; // oder z.B. "gpt-4o-mini"
-const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2025-01-01-preview`;
+const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview`;
 
 type Listing = {
     id: string | number;
@@ -89,15 +89,15 @@ Wenn unsicher: floorType="unknown".
             {
                 role: "user",
                 content: [
-                    {type: "text", text: prompt},
-                    {type: "image_url", image_url: {url: imageUrl}}
+                    { type: "text", text: prompt },
+                    { type: "image_url", image_url: { url: imageUrl } }
                 ]
             }
         ],
         temperature: 0.2,
         top_p: 0.95,
         max_tokens: 512,
-        response_format: {type: "json_object"}
+        response_format: { type: "json_object" }
     };
 
     try {
@@ -113,24 +113,45 @@ Wenn unsicher: floorType="unknown".
             }
         );
         const resp = res.data;
-        const raw = resp.choices?.[0]?.message?.content || '{}';
-        try {
-            const parsed = JSON.parse(raw);
+        // Die API liefert bei response_format: {type: "json_object"} das JSON direkt in choices[0].message.content als Objekt
+        const content = resp.choices?.[0]?.message?.content;
+        if (typeof content === "object" && content !== null) {
+            // content ist bereits ein Objekt
             return {
-                floorType: parsed.floorType ?? 'unknown',
-                brightnessCategory: parsed.brightnessCategory ?? 'unknown',
-                brightnessScore: Number(parsed.brightnessScore) || 0,
-                confidence: Number(parsed.confidence) || 0,
-                notes: parsed.notes,
+                floorType: content.floorType ?? 'unknown',
+                brightnessCategory: content.brightnessCategory ?? 'unknown',
+                brightnessScore: Number(content.brightnessScore) || 0,
+                confidence: Number(content.confidence) || 0,
+                notes: content.notes,
             };
-        } catch (e) {
-            console.error("Parse-Fehler:", e, "Antwort:", raw);
+        } else if (typeof content === "string") {
+            // Fallback: content ist ein JSON-String
+            try {
+                const parsed = JSON.parse(content);
+                return {
+                    floorType: parsed.floorType ?? 'unknown',
+                    brightnessCategory: parsed.brightnessCategory ?? 'unknown',
+                    brightnessScore: Number(parsed.brightnessScore) || 0,
+                    confidence: Number(parsed.confidence) || 0,
+                    notes: parsed.notes,
+                };
+            } catch (e) {
+                console.error("Parse-Fehler:", e, "Antwort:", content);
+                return {
+                    floorType: 'unknown',
+                    brightnessCategory: 'unknown',
+                    brightnessScore: 0,
+                    confidence: 0,
+                    notes: 'ParseError',
+                };
+            }
+        } else {
             return {
                 floorType: 'unknown',
                 brightnessCategory: 'unknown',
                 brightnessScore: 0,
                 confidence: 0,
-                notes: 'ParseError',
+                notes: 'NoContent',
             };
         }
     } catch (e: any) {
@@ -143,6 +164,7 @@ Wenn unsicher: floorType="unknown".
             notes: 'Error: ' + (e?.message || 'axios error'),
         };
     }
+
 }
 
 type RawImage = { id: string; originalUrl: string; title?: string };

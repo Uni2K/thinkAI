@@ -3,6 +3,7 @@ import {NextRequest, NextResponse} from 'next/server';
 import fs from 'fs';
 import path from 'path';
 import {mkdir, writeFile} from 'fs/promises';
+import axios from 'axios'; // <--- NEU
 
 export const dynamic = 'force-dynamic';
 
@@ -100,59 +101,46 @@ Wenn unsicher: floorType="unknown".
     };
 
     try {
-        const testRes = await fetch("https://www.google.com");
-        if (!testRes.ok) {
-            console.error("Netzwerk-Test fehlgeschlagen:", testRes.status, testRes.statusText);
+        const res = await axios.post(
+            OPENAI_API_URL,
+            body,
+            {
+                headers: {
+                    "api-key": process.env.OPENAI_API_KEY!,
+                    "Content-Type": "application/json"
+                },
+                timeout: 20000
+            }
+        );
+        const resp = res.data;
+        const raw = resp.choices?.[0]?.message?.content || '{}';
+        try {
+            const parsed = JSON.parse(raw);
+            return {
+                floorType: parsed.floorType ?? 'unknown',
+                brightnessCategory: parsed.brightnessCategory ?? 'unknown',
+                brightnessScore: Number(parsed.brightnessScore) || 0,
+                confidence: Number(parsed.confidence) || 0,
+                notes: parsed.notes,
+            };
+        } catch (e) {
+            console.error("Parse-Fehler:", e, "Antwort:", raw);
+            return {
+                floorType: 'unknown',
+                brightnessCategory: 'unknown',
+                brightnessScore: 0,
+                confidence: 0,
+                notes: 'ParseError',
+            };
         }
-    } catch (e) {
-        console.error("Netzwerk-Test-Fehler:", e);
-    }
-
-    let res: any;
-    try {
-        res = await fetch(OPENAI_API_URL, {
-            method: "POST",
-            headers: {
-                "api-key": process.env.OPENAI_API_KEY!,
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(body),
-        });
-    } catch (e) {
-        console.error("Fetch-Fehler beim Aufruf der OpenAI-API:", e);
-        throw e;
-    }
-    if (!res.ok) {
-        const err = await res.text();
+    } catch (e: any) {
+        console.error("Axios-Fehler beim Aufruf der OpenAI-API:", e?.message, e?.code, e?.response?.data);
         return {
             floorType: 'unknown',
             brightnessCategory: 'unknown',
             brightnessScore: 0,
             confidence: 0,
-            notes: 'Error: ' + err,
-        };
-    }
-
-    const resp = await res.json();
-    // Die Antwortstruktur ist wie bei OpenAI, aber choices[0].message.content enthält das JSON
-    const raw = resp.choices?.[0]?.message?.content || '{}';
-    try {
-        const parsed = JSON.parse(raw);
-        return {
-            floorType: parsed.floorType ?? 'unknown',
-            brightnessCategory: parsed.brightnessCategory ?? 'unknown',
-            brightnessScore: Number(parsed.brightnessScore) || 0,
-            confidence: Number(parsed.confidence) || 0,
-            notes: parsed.notes,
-        };
-    } catch (e) {
-        console.error("Parse-Fehler:", e, "Antwort:", raw);
-        return {
-            floorType: 'unknown',
-            brightnessCategory: 'unknown',
-            brightnessScore: 0,
-            confidence: 0,
-            notes: 'ParseError',
+            notes: 'Error: ' + (e?.message || 'axios error'),
         };
     }
 }

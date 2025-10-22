@@ -97,7 +97,7 @@ Wenn unsicher: floorType="unknown".
         temperature: 0.2,
         top_p: 0.95,
         max_tokens: 512,
-        response_format: { type: "json_object" }
+       // response_format: { type: "json_object" }
     };
 
     try {

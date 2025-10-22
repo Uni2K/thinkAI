@@ -182,17 +182,17 @@ export function PropertyListings() {
                 {/* Modern minimalist house outline */}
                 {/* Roof line */}
                 <path d="M40 15 L65 35 L15 35 Z" stroke="#3B82F6" strokeWidth="2" fill="none"/>
-                
+
                 {/* House base */}
                 <rect x="20" y="35" width="40" height="25" stroke="#3B82F6" strokeWidth="2" fill="none"/>
-                
+
                 {/* Door */}
                 <rect x="35" y="45" width="10" height="15" stroke="#3B82F6" strokeWidth="1.5" fill="none"/>
-                
+
                 {/* Windows */}
                 <rect x="25" y="42" width="6" height="6" stroke="#3B82F6" strokeWidth="1.5" fill="none"/>
                 <rect x="49" y="42" width="6" height="6" stroke="#3B82F6" strokeWidth="1.5" fill="none"/>
-                
+
                 {/* Window cross lines */}
                 <line x1="28" y1="42" x2="28" y2="48" stroke="#3B82F6" strokeWidth="0.5"/>
                 <line x1="25" y1="45" x2="31" y2="45" stroke="#3B82F6" strokeWidth="0.5"/>
@@ -646,22 +646,22 @@ export function PropertyListings() {
                                         <Euro className="w-4 h-4"/>
                                         {property.price.toLocaleString("de-DE")}
                                     </div>
-                                    <div className="flex items-center gap-1 text-xs text-muted-foreground">
-                                        <Maximize2 className="w-3 h-3"/>
+                                    <div className="flex items-center gap-1 text-muted-foreground">
+                                        <Maximize2 className="w-4 h-4"/>
                                         {property.size} m²
                                     </div>
                                 </div>
 
-                                <div className="flex flex-wrap gap-1">
-                                    <Badge variant="outline" className="text-xs">{property.rooms} Zimmer</Badge>
+                                <div className="flex flex-wrap gap-2">
+                                    <Badge variant="outline">{property.rooms} Zimmer</Badge>
                                     {property.floorType !== "unknown" &&
-                                        <Badge variant="outline" className="text-xs">Boden: {property.floorType}</Badge>}
+                                        <Badge variant="outline">Boden: {property.floorType}</Badge>}
                                     {property.exteriorColor !== "unknown" &&
-                                        <Badge variant="outline" className="text-xs">Fassade: {property.exteriorColor}</Badge>}
+                                        <Badge variant="outline">Fassade: {property.exteriorColor}</Badge>}
                                     {property.kitchenColor !== "unknown" &&
-                                        <Badge variant="outline" className="text-xs">Küche: {property.kitchenColor}</Badge>}
+                                        <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
                                     {property.bathroomTiles !== "unknown" &&
-                                        <Badge variant="outline" className="text-xs">Bad: {property.bathroomTiles}</Badge>}
+                                        <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
                                     {property.saunaType !== "unknown" &&
                                         <Badge variant="outline">Sauna: {property.saunaType}</Badge>}
                                 </div>

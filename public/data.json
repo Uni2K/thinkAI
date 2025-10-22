@@ -1,0 +1,3938 @@
+{
+  "total": 87364,
+  "results": [
+    {
+      "id": "4221df028891ce69acff53c58737e25a",
+      "title": "Gemütliche Dachgeschosswohnung mit Loggia im Stadtteil Jürgensby",
+      "zip": "24943",
+      "buyingPrice": 165000,
+      "rooms": 2,
+      "squareMeter": 51.6,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-06-26T07:06:00.313Z",
+          "name": "is24",
+          "publishDate": "2025-05-30T05:29:34.000Z",
+          "active": false,
+          "id": "159499593",
+          "creationDate": "2025-05-30T05:29:34.000Z",
+          "url": "https://www.immobilienscout24.de/expose/159499593"
+        }
+      ],
+      "rentPricePerSqm": 10.116279069767442,
+      "metaSpRentPricePerSqm": {
+        "model": "07, 2025",
+        "standarderror": 0.15592,
+        "score": 1.94,
+        "range": {
+          "min": 8.74031007751938,
+          "max": 11.976744186046512
+        }
+      },
+      "pricePerSqm": 3197.6744186046512,
+      "spPricePerSqm": 2306.201550387597,
+      "metaSpPricePerSqm": {
+        "model": "07, 2025",
+        "standarderror": 0.22401,
+        "score": 2.55,
+        "range": {
+          "min": 1879.84496124031,
+          "max": 2965.116279069767
+        }
+      },
+      "rentPrice": 522,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-SH"
+        ],
+        "_category": "place",
+        "_normalized_city": "Flensburg",
+        "_type": "neighbourhood",
+        "city_district": "Jürgensby",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "state": "Schleswig-Holstein",
+        "state_code": "SH",
+        "suburb": "Jürgensgaard",
+        "town": "Flensburg",
+        "lat": 54.7878098,
+        "lon": 9.4463071,
+        "displayName": "Jürgensgaard, Flensburg, Schleswig-Holstein, Deutschland",
+        "postcode": "24943"
+      },
+      "energyEfficiencyClass": "C",
+      "region": "Schleswig-Holstein",
+      "foreClosure": false,
+      "locationFactor": {
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 9899,
+        "universityScore": 25,
+        "population": 92550,
+        "unemploymentRate": 8.7,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "unemploymentRateScore": 0
+      },
+      "grossReturn": 3.8,
+      "grossReturnCurrent": null,
+      "constructionYear": 1971,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": 2022,
+      "lift": false,
+      "floor": 2,
+      "numberOfFloors": 2,
+      "cellar": false,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-22T08:10:44.065Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 136740,
+          "name": "Tarup",
+          "pricePerSqm": 2650,
+          "grossReturn": 3.7132075471698114
+        },
+        "similarListing": {
+          "buyingPrice": 119000,
+          "name": null,
+          "pricePerSqm": 2306.201550387597,
+          "grossReturn": 5.263865546218487
+        },
+        "location": {
+          "buyingPrice": 136740,
+          "name": "Flensburg",
+          "pricePerSqm": 2650,
+          "grossReturn": 3.7132075471698114
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 138.65546218487395,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "24943",
+          "location": "Flensburg",
+          "district": "Jürgensgaard"
+        }
+      },
+      "originalAddress": {
+        "postcode": "24943",
+        "location": "Flensburg",
+        "district": "Jürgensgaard"
+      },
+      "houseMoney": 218,
+      "images": [
+        {
+          "id": "0aaf023a43421d685df06f093ce237f4",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/26b34d99-7eac-4f1d-a6f7-deee141ccdce-1908164265.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "63beb953-c458-4c0c-a74e-abab0c"
+        },
+        {
+          "id": "493fb848f9d8012da1832b59351d4d49",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/d873e661-80bf-479f-befd-0e15ec67f847-1908164269.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "c0049a0f-b095-490f-be14-981cee"
+        },
+        {
+          "id": "2861fa013bbbe5f5c497ddb71091783a",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/f1287471-c315-4b1a-b336-c1102784de15-1908164271.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "HausansichtFrontStraße"
+        },
+        {
+          "id": "43733cee30f5b7fd96ac58f627341bed",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/0ac09730-2289-4f25-8d51-c101895fd498-1908164274.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohn-Esszimmer"
+        },
+        {
+          "id": "cdd0c6138a75f6e5fbf53e1700c7d5b7",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/2f7df2be-064e-48ea-ad2c-704cc38858f4-1908164275.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "WohnEssbereich"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 165000,
+          "platformName": "immowelt",
+          "creationDate": "2025-08-31T19:27:57.149Z"
+        },
+        {
+          "buyingPrice": 179000,
+          "platformName": "immowelt",
+          "creationDate": "2025-05-30T05:33:44.761Z"
+        },
+        {
+          "buyingPrice": 179000,
+          "platformName": "is24",
+          "creationDate": "2025-05-30T05:29:34.000Z"
+        },
+        {
+          "buyingPrice": 159000,
+          "platformName": "ebk",
+          "creationDate": "2025-10-22T07:45:44.969Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T08:10:44.066Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 522,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 522,
+      "hasImages": true
+    },
+    {
+      "id": "fb4c76e7c2d04f2ea4dcc569ac130941",
+      "title": "Friedenau: sanierte 3-Zi-Altbau-Wohnung mit Wintergarten",
+      "zip": "12159",
+      "buyingPrice": 650000,
+      "rooms": 3,
+      "squareMeter": 103.9,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-05-07T17:27:24.193Z",
+          "name": "is24",
+          "publishDate": "2025-04-11T07:36:23.000Z",
+          "active": false,
+          "id": "158499960",
+          "creationDate": "2025-04-11T07:36:23.000Z",
+          "url": "https://www.immobilienscout24.de/expose/158499960"
+        }
+      ],
+      "rentPricePerSqm": 17.0837343599615,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.25748,
+        "score": 2.84,
+        "range": {
+          "min": 13.580365736284888,
+          "max": 23.00288739172281
+        }
+      },
+      "pricePerSqm": 6256.015399422521,
+      "spPricePerSqm": 5591.915303176131,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.22653,
+        "score": 2.57,
+        "range": {
+          "min": 4562.078922040423,
+          "max": 7237.728585178055
+        }
+      },
+      "rentPrice": 1775,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BE"
+        ],
+        "_category": "building",
+        "_normalized_city": "Berlin",
+        "_type": "building",
+        "borough": "Tempelhof-Schöneberg",
+        "city": "Berlin",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "house_number": "62",
+        "political_union": "European Union",
+        "postcode": "12159",
+        "road": "Fregestraße",
+        "state": "Berlin",
+        "state_code": "BE",
+        "suburb": "Schöneberg",
+        "lat": 52.4686231,
+        "lon": 13.3375455,
+        "displayName": "Fregestraße 62, 12159 Berlin, Deutschland"
+      },
+      "energyEfficiencyClass": "E",
+      "region": "Berlin",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 185123,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 3755251
+      },
+      "grossReturn": 3.28,
+      "grossReturnCurrent": null,
+      "constructionYear": 1889,
+      "apartmentType": "APARTMENT",
+      "condition": "FULLY_RENOVATED",
+      "lastRefurbishment": 2022,
+      "lift": false,
+      "floor": 2,
+      "numberOfFloors": 4,
+      "cellar": true,
+      "balcony": false,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-22T07:38:13.987Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 394820,
+          "name": "Schöneberg",
+          "pricePerSqm": 3800,
+          "grossReturn": 3.56842105263158
+        },
+        "similarListing": {
+          "buyingPrice": 581000,
+          "name": null,
+          "pricePerSqm": 5591.915303176131,
+          "grossReturn": 3.6660929432013774
+        },
+        "location": {
+          "buyingPrice": 503915,
+          "name": "Berlin",
+          "pricePerSqm": 4850,
+          "grossReturn": 3.0927835051546393
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 111.87607573149741,
+      "oAddress": {
+        "is24": {
+          "street": "Fregestraße 62",
+          "postcode": "12159",
+          "location": "Berlin",
+          "district": "Schöneberg"
+        }
+      },
+      "originalAddress": {
+        "street": "Fregestraße 62",
+        "postcode": "12159",
+        "location": "Berlin",
+        "district": "Schöneberg"
+      },
+      "houseMoney": 282.05,
+      "images": [
+        {
+          "id": "35ce267d03e9c783bbba225350c58a4b",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/e5335d0f-d02d-44f1-8058-6fccbddf30e6-1895065992.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Zwei Zimmer zur Straße"
+        },
+        {
+          "id": "8f6877c4e4a7ae8b845763b9ed3849c1",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/da3397ae-4041-4332-8ef7-c5d8017289f7-1895065995.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Erkerzimmer Wohnzimmer"
+        },
+        {
+          "id": "7e24f7ef5303f168bb94687edfd91bdf",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/5e20d7c3-024b-47f3-b436-a5262ee69525-1895065999.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Eines der Schlafzimmer"
+        },
+        {
+          "id": "cc8613e97bca4e2e86ca69580261199b",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/c78b0def-5ca3-4789-90f7-7e1889a85c92-1895066005.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Schlafzimmer zum Innenhof"
+        },
+        {
+          "id": "34916dd857a8ab04cb8f3bcdc1f7467c",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/d9d51f54-dedf-4148-9e63-9448a4ab26a6-1895066007.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Tageslichtbad mit Wanne"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 686000,
+          "platformName": "immonet",
+          "creationDate": "2025-04-11T09:53:14.511Z"
+        },
+        {
+          "buyingPrice": 686000,
+          "platformName": "ebk",
+          "creationDate": "2025-04-11T07:43:19.009Z"
+        },
+        {
+          "buyingPrice": 686000,
+          "platformName": "is24",
+          "creationDate": "2025-04-11T07:36:23.000Z"
+        },
+        {
+          "buyingPrice": 650000,
+          "platformName": "immonet",
+          "creationDate": "2025-06-23T16:41:51.666Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T08:01:08.905Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1775,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1775,
+      "hasImages": true
+    },
+    {
+      "id": "04af946b30412472c297eeda74b8a73d",
+      "title": "Teilsanierte 2-Zimmerwohnung in Berlins grüner Toplage Alt-Treptow",
+      "zip": "12435",
+      "buyingPrice": 359900,
+      "rooms": 2,
+      "squareMeter": 51.88,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2023-08-31T13:59:42.327Z",
+          "name": "is24",
+          "publishDate": "2023-06-23T13:49:43.000Z",
+          "active": false,
+          "id": "143480284",
+          "creationDate": "2023-06-23T13:49:43.000Z",
+          "url": "https://www.immobilienscout24.de/expose/143480284"
+        }
+      ],
+      "rentPricePerSqm": 17.46337702390131,
+      "metaSpRentPricePerSqm": {
+        "model": "05, 2025",
+        "standarderror": 0.2706,
+        "score": 2.96,
+        "range": {
+          "min": 13.74325366229761,
+          "max": 23.939861218195837
+        }
+      },
+      "pricePerSqm": 6937.162683114881,
+      "spPricePerSqm": 5744.02467232074,
+      "metaSpPricePerSqm": {
+        "model": "05, 2025",
+        "standarderror": 0.18845,
+        "score": 2.23,
+        "range": {
+          "min": 4838.087895142637,
+          "max": 7074.0169622205085
+        }
+      },
+      "rentPrice": 906,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BE"
+        ],
+        "_category": "building",
+        "_type": "building",
+        "borough": "Treptow-Köpenick",
+        "city": "Berlin",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "house_number": "6",
+        "political_union": "European Union",
+        "postcode": "12435",
+        "road": "Elsenstraße",
+        "state": "Berlin",
+        "state_code": "BE",
+        "suburb": "Alt-Treptow",
+        "lat": 52.4924068,
+        "lon": 13.4580847,
+        "displayName": "Elsenstraße 6, 12435 Berlin, Deutschland",
+        "_normalized_city": "Berlin"
+      },
+      "region": "Berlin",
+      "foreClosure": false,
+      "locationFactor": {
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 185123,
+        "universityScore": 25,
+        "population": 3755251,
+        "unemploymentRate": 10.3,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "unemploymentRateScore": 0
+      },
+      "grossReturn": 3.02,
+      "grossReturnCurrent": null,
+      "constructionYear": 1996,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 1,
+      "numberOfFloors": 4,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": true,
+      "publishDate": "2025-10-22T07:33:06.971Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 267182,
+          "name": "Alt-Treptow",
+          "pricePerSqm": 5150,
+          "grossReturn": 3.005825242718447
+        },
+        "similarListing": {
+          "buyingPrice": 298000,
+          "name": null,
+          "pricePerSqm": 5744.02467232074,
+          "grossReturn": 3.6483221476510064
+        },
+        "location": {
+          "buyingPrice": 251618,
+          "name": "Berlin",
+          "pricePerSqm": 4850,
+          "grossReturn": 3.0927835051546393
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 120.7718120805369,
+      "oAddress": {
+        "is24": {
+          "street": "Elsenstraße 6",
+          "postcode": "12435",
+          "location": "Berlin",
+          "district": "Alt-Treptow"
+        },
+        "ebk": {
+          "street": "elsenstraße 6",
+          "locationQuery": "Elsenstraße 6, 12435 Berlin, Treptow",
+          "postcode": "12435",
+          "location": "berlin"
+        }
+      },
+      "originalAddress": {
+        "street": "Elsenstraße 6",
+        "postcode": "12435",
+        "location": "Berlin",
+        "district": "Alt-Treptow"
+      },
+      "houseMoney": 334,
+      "images": [
+        {
+          "id": "a111f21e2310bbf1245c4689d7dfdf5a",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/7326f043-8e1a-4dbe-a510-84be0545f2f9-1630651314.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "EigentumswohnungBerlin-Treptow"
+        },
+        {
+          "id": "7208d5dfd5cbfc69fc983287574ef318",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/8bddbe79-28e0-49cf-b43a-5e3c28189bb1-1630651316.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "EigentumswohnungBerlin-Treptow"
+        },
+        {
+          "id": "1e5e5c53ce217caa8bc5a2d4b4cae4ba",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/7063f71c-0e52-4cae-8173-31ab06a9ace3-1630651321.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "EigentumswohnungBerlin-Treptow"
+        },
+        {
+          "id": "0d1c11140cd430bfebe0d16e6e7b2272",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/435f725c-ef77-4332-88d4-6c80d0ef13d2-1630651326.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "EigentumswohnungBerlin-Treptow"
+        },
+        {
+          "id": "313fa7d4526486be5f982fd8a36ea2c5",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/9adb78b5-d16d-4ca5-8f54-dbf7d1d48ad4-1630651329.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "EigentumswohnungBerlin-Treptow"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 359900,
+          "platformName": "ebk",
+          "creationDate": "2024-11-07T14:12:31.446Z"
+        },
+        {
+          "buyingPrice": 299900,
+          "platformName": "ebk",
+          "creationDate": "2024-07-17T14:58:12.023Z"
+        },
+        {
+          "buyingPrice": 299900,
+          "platformName": "is24",
+          "creationDate": "2023-06-23T13:49:43.000Z"
+        },
+        {
+          "buyingPrice": 359900,
+          "platformName": "immonet",
+          "creationDate": "2025-03-05T17:02:21.452Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:33:06.971Z",
+      "energyEfficiencyClass": "E",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 906,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 906,
+      "hasImages": true
+    },
+    {
+      "id": "02b74a7d32a104076442599b17dd8069",
+      "title": "Exklusives Penthouse-Schmuckstück mit gehobener Ausstattung und Weitblick über Berlin-Köpenick",
+      "zip": "12555",
+      "buyingPrice": 675000,
+      "rooms": 3,
+      "squareMeter": 84,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-19T00:13:08.853Z",
+          "name": "is24",
+          "publishDate": "2025-06-18T15:29:36.307Z",
+          "active": false,
+          "id": "157867192",
+          "creationDate": "2025-06-18T15:29:36.307Z",
+          "url": "https://www.immobilienscout24.de/expose/157867192"
+        }
+      ],
+      "rentPricePerSqm": 18.214285714285715,
+      "metaSpRentPricePerSqm": {
+        "score": 2.32,
+        "standarderror": 0.19891,
+        "range": {
+          "min": 15.19047619047619,
+          "max": 22.726190476190474
+        },
+        "model": "06, 2025"
+      },
+      "pricePerSqm": 8035.714285714285,
+      "spPricePerSqm": 5857.142857142857,
+      "metaSpPricePerSqm": {
+        "score": 2.07,
+        "standarderror": 0.17067,
+        "range": {
+          "min": 5000,
+          "max": 7059.523809523809
+        },
+        "model": "06, 2025"
+      },
+      "rentPrice": 1530,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BE"
+        ],
+        "_category": "building",
+        "_normalized_city": "Berlin",
+        "_type": "building",
+        "borough": "Treptow-Köpenick",
+        "city": "Berlin",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "house_number": "35",
+        "neighbourhood": "Dammvorstadt",
+        "political_union": "European Union",
+        "postcode": "12555",
+        "road": "Parrisiusstraße",
+        "state": "Berlin",
+        "state_code": "BE",
+        "suburb": "Köpenick",
+        "lat": 52.4564889,
+        "lon": 13.5833091,
+        "displayName": "Parrisiusstraße 35, 12555 Berlin, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Berlin",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 185123,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 3755251
+      },
+      "grossReturn": 2.72,
+      "grossReturnCurrent": null,
+      "constructionYear": 2025,
+      "apartmentType": "PENTHOUSE",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 4,
+      "numberOfFloors": 4,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-22T07:33:05.045Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 268800,
+          "name": "Köpenick",
+          "pricePerSqm": 3200,
+          "grossReturn": 3.6750000000000007
+        },
+        "similarListing": {
+          "buyingPrice": 492000,
+          "name": null,
+          "pricePerSqm": 5857.142857142857,
+          "grossReturn": 3.7317073170731714
+        },
+        "location": {
+          "buyingPrice": 407400,
+          "name": "Berlin",
+          "pricePerSqm": 4850,
+          "grossReturn": 3.0927835051546393
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 137.1951219512195,
+      "oAddress": {
+        "is24": {
+          "street": "Parrisiusstraße 35",
+          "postcode": "12555",
+          "location": "Berlin",
+          "district": "Köpenick"
+        }
+      },
+      "originalAddress": {
+        "street": "Parrisiusstraße 35",
+        "postcode": "12555",
+        "location": "Berlin",
+        "district": "Köpenick"
+      },
+      "houseMoney": 252,
+      "images": [
+        {
+          "id": "ff7767bc174ad8260c1e56aafb02df04",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/186e823d-d562-4d0d-b8c4-a649d1098d51-1887125631.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hofbereich + Außenansicht"
+        },
+        {
+          "id": "d379564eeb7699b6694a6da9623ce52f",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/baef25c1-4d04-415c-ab81-1d970cdf8d64-1887125635.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hausansicht Rückseite"
+        },
+        {
+          "id": "3ebb3adb47d5f0eefd8dfab1c12b7700",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/dcc6c97e-e616-472c-9b59-2bfdc62f8537-1887125625.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "DrohnePenthouse"
+        },
+        {
+          "id": "3a42fd4536c395c76d18261dd067192e",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/1ab1792a-4dbb-4878-883c-c1d832f745f9-1887125624.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "DrohneRückseite"
+        },
+        {
+          "id": "f7db3fcecd0f56cea384e442de3afc90",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/14dadb27-3981-4727-aa14-5750f026a5f1-1887125630.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hofbereich + Außenansicht in d"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 675000,
+          "platformName": "is24",
+          "creationDate": "2025-07-09T19:47:00.461Z"
+        },
+        {
+          "buyingPrice": 699000,
+          "platformName": "ebk",
+          "creationDate": "2025-03-26T08:32:52.793Z"
+        },
+        {
+          "buyingPrice": 699000,
+          "platformName": "is24",
+          "creationDate": "2024-12-29T09:41:25.000Z"
+        },
+        {
+          "buyingPrice": 675000,
+          "platformName": "ebk",
+          "creationDate": "2025-07-11T11:53:13.373Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:33:05.045Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1530,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1530,
+      "hasImages": true
+    },
+    {
+      "id": "7a4e74874be5e0aa016a1a021ef97183",
+      "title": "***Kapitalanlage - grün - Maisonette - vermietet - Lostau***",
+      "zip": "39291",
+      "buyingPrice": 148000,
+      "rooms": 4,
+      "squareMeter": 100.93,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-07-17T00:42:57.853Z",
+          "name": "is24",
+          "publishDate": "2024-09-27T08:36:08.271Z",
+          "active": false,
+          "id": "154249912",
+          "creationDate": "2024-09-27T08:36:08.271Z",
+          "url": "https://www.immobilienscout24.de/expose/154249912"
+        }
+      ],
+      "rentPricePerSqm": 6.915684137521054,
+      "metaSpRentPricePerSqm": {
+        "score": 1.66,
+        "standarderror": 0.12378,
+        "range": {
+          "min": 6.162687010799564,
+          "max": 7.8965619736451
+        },
+        "model": "06, 2025"
+      },
+      "pricePerSqm": 1466.3628257207965,
+      "spPricePerSqm": 1595.1649658178935,
+      "metaSpPricePerSqm": {
+        "score": 2.57,
+        "standarderror": 0.22638,
+        "range": {
+          "min": 1297.9292579015157,
+          "max": 2060.8342415535517
+        },
+        "model": "06, 2025"
+      },
+      "rentPrice": 698,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-ST"
+        ],
+        "_category": "road",
+        "_normalized_city": "Möser",
+        "_type": "road",
+        "city": "Möser",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Jerichower Land",
+        "political_union": "European Union",
+        "state": "Sachsen-Anhalt",
+        "state_code": "ST",
+        "village": "Hohenwarthe",
+        "lat": 52.2217996,
+        "lon": 11.712919,
+        "displayName": "A 2, 39291 Hohenwarthe, Deutschland",
+        "postcode": "39291",
+        "road": "A 2",
+        "road_type": "motorway_junction"
+      },
+      "energyEfficiencyClass": "C",
+      "region": "Sachsen-Anhalt",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 7.3,
+        "score": 44,
+        "populationTrendScore": 8.332,
+        "populationTrend": {
+          "from": -15,
+          "to": -10
+        },
+        "populationScore": 0,
+        "hasUniversity": true,
+        "numberOfStudents": 185,
+        "unemploymentRateScore": 10.479452054794521,
+        "universityScore": 25,
+        "population": 0
+      },
+      "grossReturn": 5.66,
+      "grossReturnCurrent": null,
+      "constructionYear": 1994,
+      "apartmentType": "MAISONETTE",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": null,
+      "numberOfFloors": null,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": true,
+      "publishDate": "2025-10-22T07:21:49.873Z",
+      "privateOffer": false,
+      "aggregations": {
+        "similarListing": {
+          "buyingPrice": 161000,
+          "name": null,
+          "pricePerSqm": 1595.1649658178935,
+          "grossReturn": 5.202484472049689
+        },
+        "location": {
+          "buyingPrice": 131209,
+          "name": "Möser",
+          "pricePerSqm": 1300,
+          "grossReturn": 5.815384615384614
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 91.92546583850931,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "39291",
+          "location": "Lostau"
+        },
+        "ebk": {
+          "street": null,
+          "locationQuery": "39291, Lostau",
+          "postcode": "39291",
+          "location": "lostau"
+        }
+      },
+      "originalAddress": {
+        "postcode": "39291",
+        "location": "Lostau"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "d900aac2353d6a699dcad070c61bc1e5",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/45fdb42f-3366-48a0-8b44-924d3518b0b3-1848428295.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Titel"
+        },
+        {
+          "id": "63c73787e47b0c17073acffcd2e82059",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/7d45299e-1cac-46d8-b590-7243dd04d3a6-1848428303.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Außenansicht_1"
+        },
+        {
+          "id": "43a0c3f18b8f1f908af5d91d25afe10c",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/73ed2b37-43c5-4da8-a672-7e273c96c878-1848428311.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Außenansicht_2"
+        },
+        {
+          "id": "f6897a6e6d84eefe0988ae2f7fff8943",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/a8213370-dd5a-487f-bce3-c41e2967db7d-1848428318.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Außenansicht_3"
+        },
+        {
+          "id": "76d2dfc3384233fe75e18cb7ec362fc6",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/c39403e7-302e-459b-a0cd-347536c62b16-1848428324.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Küche"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 148000,
+          "platformName": "ivd24",
+          "creationDate": "2024-11-25T16:21:15.276Z"
+        },
+        {
+          "buyingPrice": 148000,
+          "platformName": "is24",
+          "creationDate": "2024-09-27T08:36:08.271Z"
+        },
+        {
+          "buyingPrice": 148000,
+          "platformName": "ebk",
+          "creationDate": "2024-11-26T08:15:15.716Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:45:58.981Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 698,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 698,
+      "hasImages": true
+    },
+    {
+      "id": "0eca003744c7e014bde1a51b154c6e7f",
+      "title": "Penthouse Wohnung in Potsdam West",
+      "zip": "14471",
+      "buyingPrice": 819000,
+      "rooms": 5,
+      "squareMeter": 108,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-23T14:52:40.692Z",
+          "name": "is24",
+          "publishDate": "2025-09-22T13:57:58.956Z",
+          "active": false,
+          "id": "161792172",
+          "creationDate": "2025-09-22T13:57:58.956Z",
+          "url": "https://www.immobilienscout24.de/expose/161792172"
+        }
+      ],
+      "rentPricePerSqm": 15.88888888888889,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.12929,
+        "score": 1.7,
+        "range": {
+          "min": 14.074074074074074,
+          "max": 18.25
+        }
+      },
+      "pricePerSqm": 7583.333333333333,
+      "spPricePerSqm": 6046.2962962962965,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.15757,
+        "score": 1.96,
+        "range": {
+          "min": 5222.222222222223,
+          "max": 7175.925925925926
+        }
+      },
+      "rentPrice": 1716,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BB"
+        ],
+        "_category": "place",
+        "_normalized_city": "Potsdam",
+        "_type": "neighbourhood",
+        "city": "Potsdam",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "postcode": "14471",
+        "state": "Brandenburg",
+        "state_code": "BB",
+        "suburb": "Potsdam West",
+        "lat": 52.3785892,
+        "lon": 13.0012601,
+        "displayName": "14471 Potsdam, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Brandenburg",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": null,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 185750
+      },
+      "grossReturn": 2.51,
+      "grossReturnCurrent": null,
+      "constructionYear": 2025,
+      "apartmentType": "PENTHOUSE",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 4,
+      "numberOfFloors": 4,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-22T07:09:53.468Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 507600,
+          "name": "Potsdam West",
+          "pricePerSqm": 4700,
+          "grossReturn": 2.9617021276595743
+        },
+        "similarListing": {
+          "buyingPrice": 653000,
+          "name": null,
+          "pricePerSqm": 6046.2962962962965,
+          "grossReturn": 3.1534456355283313
+        },
+        "location": {
+          "buyingPrice": 507600,
+          "name": "Potsdam",
+          "pricePerSqm": 4700,
+          "grossReturn": 3.012765957446809
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 125.42113323124042,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "14471",
+          "location": "Potsdam",
+          "district": "Potsdam West"
+        }
+      },
+      "originalAddress": {
+        "postcode": "14471",
+        "location": "Potsdam",
+        "district": "Potsdam West"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "floorPlan": false,
+          "id": "a18444861e4584b93c0a105a0075d907",
+          "originalUrl": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/b9/b985ec2d-23c8-4463-a13a-1458502b16b8?rule=$_59.AUTO",
+          "title": "Penthouse Wohnung in Potsdam West in Potsdam"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 819000,
+          "platformName": "is24",
+          "creationDate": "2025-09-22T13:57:58.956Z"
+        },
+        {
+          "buyingPrice": 819000,
+          "platformName": "ebk",
+          "creationDate": "2025-09-22T14:58:58.191Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:58:06.602Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1716,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1716,
+      "hasImages": true
+    },
+    {
+      "id": "f5d332d382601ca75b4859d856b94dc4",
+      "title": "unvermietet",
+      "zip": "41334",
+      "buyingPrice": 110000,
+      "rooms": 2,
+      "squareMeter": 42,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-10-20T07:06:46.871Z",
+          "name": "is24",
+          "publishDate": "2025-08-08T11:40:55.113Z",
+          "active": false,
+          "id": "161749766",
+          "creationDate": "2025-08-08T11:40:55.113Z",
+          "url": "https://www.immobilienscout24.de/expose/161749766"
+        }
+      ],
+      "rentPricePerSqm": 9.071428571428571,
+      "metaSpRentPricePerSqm": {
+        "score": 2.12,
+        "standarderror": 0.17562,
+        "range": {
+          "min": 7.714285714285714,
+          "max": 11
+        },
+        "model": "06, 2025"
+      },
+      "pricePerSqm": 2619.0476190476193,
+      "spPricePerSqm": 1642.857142857143,
+      "metaSpPricePerSqm": {
+        "score": 2.68,
+        "standarderror": 0.23874,
+        "range": {
+          "min": 1309.5238095238096,
+          "max": 2142.8571428571427
+        },
+        "model": "06, 2025"
+      },
+      "rentPrice": 381,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NW"
+        ],
+        "_category": "building",
+        "_normalized_city": "Kaldenkirchen",
+        "_type": "building",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Kreis Viersen",
+        "house_number": "5",
+        "municipality": "Nettetal",
+        "neighbourhood": "Kreuzmönchdorf",
+        "political_union": "European Union",
+        "postcode": "41334",
+        "road": "Dahlienweg",
+        "state": "Nordrhein-Westfalen",
+        "state_code": "NW",
+        "town": "Kaldenkirchen",
+        "lat": 51.3181828,
+        "lon": 6.185081,
+        "displayName": "Dahlienweg 5, 41334 Kaldenkirchen, Deutschland"
+      },
+      "region": "Nordrhein-Westfalen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 17,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 0,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 0
+      },
+      "grossReturn": 4.16,
+      "grossReturnCurrent": null,
+      "constructionYear": 1975,
+      "apartmentType": "PENTHOUSE",
+      "condition": "NEGOTIABLE",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": null,
+      "numberOfFloors": 6,
+      "cellar": true,
+      "balcony": false,
+      "garden": false,
+      "active": true,
+      "rented": true,
+      "publishDate": "2025-10-22T07:01:12.804Z",
+      "privateOffer": true,
+      "aggregations": {
+        "similarListing": {
+          "buyingPrice": 69000,
+          "name": null,
+          "pricePerSqm": 1642.857142857143,
+          "grossReturn": 6.626086956521739
+        },
+        "location": {
+          "buyingPrice": 90300,
+          "name": "Kaldenkirchen",
+          "pricePerSqm": 2150,
+          "grossReturn": 4.018604651162791
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 159.4202898550725,
+      "oAddress": {
+        "kip": {
+          "street": "dahlienweg 5",
+          "postcode": "41334",
+          "location": "nettetal",
+          "locationQuery": "41334 Nettetal, Dahlienweg 5"
+        }
+      },
+      "originalAddress": {
+        "street": "dahlienweg 5",
+        "postcode": "41334",
+        "location": "nettetal",
+        "locationQuery": "41334 Nettetal, Dahlienweg 5"
+      },
+      "houseMoney": 270,
+      "images": [],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 110000,
+          "platformName": "immobilien",
+          "creationDate": "2025-08-23T01:54:34.701Z"
+        },
+        {
+          "buyingPrice": 110000,
+          "platformName": "kip",
+          "creationDate": "2025-08-16T13:34:51.538Z"
+        },
+        {
+          "buyingPrice": 100000,
+          "platformName": "kip",
+          "creationDate": "2025-08-11T15:11:42.425Z"
+        },
+        {
+          "buyingPrice": 110000,
+          "platformName": "is24",
+          "creationDate": "2025-08-08T11:40:55.113Z"
+        },
+        {
+          "buyingPrice": 110000,
+          "platformName": "ohnemakler",
+          "creationDate": "2025-09-20T17:09:11.639Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:01:12.805Z",
+      "energyEfficiencyClass": "A",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 381,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 381,
+      "hasImages": false
+    },
+    {
+      "id": "91ee7ed769742c3be77c4bb4b1acb058",
+      "title": "Provisionsfrei!! Schöne 2 Zimmerwohnnung in Strandnähe",
+      "zip": "18225",
+      "buyingPrice": 350000,
+      "rooms": 2,
+      "squareMeter": 57,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-10-06T00:02:24.777Z",
+          "name": "is24",
+          "publishDate": "2025-09-05T18:25:59.000Z",
+          "active": false,
+          "id": "161475658",
+          "creationDate": "2025-09-05T18:25:59.000Z",
+          "url": "https://www.immobilienscout24.de/expose/161475658"
+        }
+      ],
+      "rentPricePerSqm": 10.947368421052632,
+      "metaSpRentPricePerSqm": {
+        "model": "08, 2025",
+        "standarderror": 0.1652,
+        "score": 2.02,
+        "range": {
+          "min": 9.385964912280702,
+          "max": 13.105263157894736
+        }
+      },
+      "pricePerSqm": 6140.350877192983,
+      "spPricePerSqm": 3947.3684210526317,
+      "metaSpPricePerSqm": {
+        "model": "08, 2025",
+        "standarderror": 0.23276,
+        "score": 2.62,
+        "range": {
+          "min": 3192.9824561403507,
+          "max": 5140.350877192983
+        }
+      },
+      "rentPrice": 624,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-MV"
+        ],
+        "_category": "building",
+        "_normalized_city": "Kühlungsborn",
+        "_type": "building",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Landkreis Rostock",
+        "house_number": "36",
+        "political_union": "European Union",
+        "postcode": "18225",
+        "road": "Hermann-Häcker-Straße",
+        "state": "Mecklenburg-Vorpommern",
+        "state_code": "MV",
+        "town": "Kühlungsborn",
+        "lat": 54.1513899,
+        "lon": 11.7264357,
+        "displayName": "Hermann-Häcker-Straße 36, 18225 Kühlungsborn, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Mecklenburg-Vorpommern",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 12,
+        "populationTrendScore": 12.498000000000001,
+        "populationTrend": {
+          "from": -10,
+          "to": -5
+        },
+        "populationScore": 0,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 8037
+      },
+      "grossReturn": 2.14,
+      "grossReturnCurrent": null,
+      "constructionYear": 1920,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": 2005,
+      "lift": true,
+      "floor": 1,
+      "numberOfFloors": 3,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-22T06:34:03.259Z",
+      "privateOffer": true,
+      "aggregations": {
+        "similarListing": {
+          "buyingPrice": 225000,
+          "name": null,
+          "pricePerSqm": 3947.3684210526317,
+          "grossReturn": 3.3280000000000003
+        },
+        "location": {
+          "buyingPrice": 319200,
+          "name": "Kühlungsborn",
+          "pricePerSqm": 5600,
+          "grossReturn": 2.164285714285714
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 155.55555555555557,
+      "oAddress": {
+        "is24": {
+          "street": "Hermann-Häcker-Str. 36",
+          "postcode": "18225",
+          "location": "Kühlungsborn"
+        }
+      },
+      "originalAddress": {
+        "street": "Hermann-Häcker-Str. 36",
+        "postcode": "18225",
+        "location": "Kühlungsborn"
+      },
+      "houseMoney": 275,
+      "images": [
+        {
+          "id": "ca7dbe565a6924a3a3104da46ac5c897",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/fb50745f-5594-4176-bd68-436e23cea41d-1936886215.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hausansicht"
+        },
+        {
+          "id": "9e33d663893ed4803d3027eec5d5e4e2",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/a952da80-dd4f-4bac-a42a-2d81345aa7d0-1936886219.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnzimmer"
+        },
+        {
+          "id": "36ec355566eced94d8738981219067c9",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/54d91535-52f2-4f71-ac47-ff3c75a3db67-1936886211.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnzimmer"
+        },
+        {
+          "id": "4403b36249539065b4687464b7ea9aa9",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/31b958e6-6afc-4e8e-bbf6-c49e3ec0b58b-1936886216.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnzimmer"
+        },
+        {
+          "id": "63c9d1a58147fe6d80c05a5420ec6ad4",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/51bfb7d4-c62a-46af-868b-9eae1adb03e0-1936886222.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Küche"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 360000,
+          "platformName": "is24",
+          "creationDate": "2025-09-05T18:25:59.000Z"
+        },
+        {
+          "buyingPrice": 350000,
+          "platformName": "ebk",
+          "creationDate": "2025-10-22T06:22:00.455Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T07:58:55.058Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 624,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 624,
+      "hasImages": true
+    },
+    {
+      "id": "93f08558369eb9d81c5d86c8bcb499b0",
+      "title": "Moderne 4-Zimmer-Whg mit Süd-Balkon, zwei Bädern & Stellplatz",
+      "zip": "81241",
+      "buyingPrice": 859000,
+      "rooms": 4,
+      "squareMeter": 90,
+      "comission": 2.5,
+      "platforms": [
+        {
+          "deactivationDate": "2025-08-22T17:30:41.942Z",
+          "name": "is24",
+          "publishDate": "2025-06-23T13:06:39.000Z",
+          "active": false,
+          "id": "160007060",
+          "creationDate": "2025-06-23T13:06:39.000Z",
+          "url": "https://www.immobilienscout24.de/expose/160007060"
+        }
+      ],
+      "rentPricePerSqm": 21.477777777777778,
+      "metaSpRentPricePerSqm": {
+        "model": "05, 2025",
+        "standarderror": 0.18012,
+        "score": 2.16,
+        "range": {
+          "min": 18.2,
+          "max": 26.2
+        }
+      },
+      "pricePerSqm": 9544.444444444445,
+      "spPricePerSqm": 8433.333333333334,
+      "metaSpPricePerSqm": {
+        "model": "05, 2025",
+        "standarderror": 0.1432,
+        "score": 1.83,
+        "range": {
+          "min": 7377.777777777777,
+          "max": 9844.444444444445
+        }
+      },
+      "rentPrice": 1933,
+      "rentPriceCurrent": 1690,
+      "rentPriceCurrentPerSqm": 18.77777777777778,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BY"
+        ],
+        "_category": "place",
+        "_normalized_city": "München",
+        "_type": "neighbourhood",
+        "city": "München",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "state": "Bayern",
+        "state_code": "BY",
+        "lat": 48.1477854,
+        "lon": 11.4607008,
+        "displayName": "81241 München, Deutschland",
+        "postcode": "81241",
+        "suburb": "Pasing",
+        "city_district": "Pasing-Obermenzing"
+      },
+      "energyEfficiencyClass": "C",
+      "region": "Bayern",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 126643,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 1512491
+      },
+      "grossReturn": 2.7,
+      "grossReturnCurrent": 2.36,
+      "constructionYear": 2002,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 2,
+      "numberOfFloors": 4,
+      "cellar": false,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": true,
+      "publishDate": "2025-10-22T05:38:04.563Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 702000,
+          "name": "Pasing-Obermenzing",
+          "pricePerSqm": 7800,
+          "grossReturn": 2.9692307692307693
+        },
+        "location": {
+          "buyingPrice": 738000,
+          "name": "München",
+          "pricePerSqm": 8200,
+          "grossReturn": 2.9707317073170736
+        },
+        "similarListing": {
+          "buyingPrice": 759000,
+          "name": null,
+          "pricePerSqm": 8433.333333333334,
+          "grossReturn": 3.0561264822134384
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 113.1752305665349,
+      "oAddress": {
+        "immowelt": {
+          "street": null,
+          "postcode": "81241",
+          "location": "München"
+        },
+        "is24": {
+          "street": null,
+          "district": "Pasing",
+          "postcode": "81241",
+          "location": "München"
+        }
+      },
+      "originalAddress": {
+        "street": "",
+        "postcode": "81241",
+        "location": "München"
+      },
+      "houseMoney": 318,
+      "images": [
+        {
+          "id": "fec768736070c02f1d51f70bf4a500cf",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/9209bb4e-0614-409e-8efd-d2602ce4139e-1915279420.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnzimmer 1"
+        },
+        {
+          "id": "5752772444adbd89251831f235a8eb63",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/cd840094-d01a-424d-b5cc-9e12156a00c1-1915279436.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Balkon 1"
+        },
+        {
+          "id": "2f74b085f9aa561d4fae9ae4c1c81050",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/637d2766-8a7c-4654-b3a3-9ab948050e75-1915279440.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnzimmer 2-1"
+        },
+        {
+          "id": "263fbc350fef5138ac52cfcc35e57ec8",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/c0a99e93-a5db-4532-9676-1c96fae0d8f9-1915279445.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Küche 1"
+        },
+        {
+          "id": "0dfd1cfe75e395e232c1aff074d869df",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/ba5ca9d1-4ad5-4c97-9ffc-a17d65f373d0-1915279447.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Küche 2"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 859000,
+          "platformName": "immowelt",
+          "creationDate": "2025-06-27T12:46:07.322Z"
+        },
+        {
+          "buyingPrice": 859000,
+          "platformName": "is24",
+          "creationDate": "2025-06-27T11:46:54.421Z"
+        },
+        {
+          "buyingPrice": 890000,
+          "platformName": "ebk",
+          "creationDate": "2025-06-23T13:55:29.261Z"
+        },
+        {
+          "buyingPrice": 890000,
+          "platformName": "immowelt",
+          "creationDate": "2025-06-23T13:10:03.225Z"
+        },
+        {
+          "buyingPrice": 890000,
+          "platformName": "is24",
+          "creationDate": "2025-06-23T13:06:39.000Z"
+        },
+        {
+          "buyingPrice": 859000,
+          "platformName": "ebk",
+          "creationDate": "2025-06-28T10:02:53.265Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:38:04.564Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1690,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1690,
+      "hasImages": true
+    },
+    {
+      "id": "c64024aa1e8f6e5ebe33ff380368eafb",
+      "title": "45m² - 2 Zimmer-Wohnung im 1. OG mit TG",
+      "zip": "04157",
+      "buyingPrice": 125000,
+      "rooms": 2,
+      "squareMeter": 45,
+      "comission": 19,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-30T22:10:29.753Z",
+          "name": "is24",
+          "publishDate": "2025-09-17T18:31:34.387Z",
+          "active": false,
+          "id": "161698060",
+          "creationDate": "2025-09-17T18:31:34.387Z",
+          "url": "https://www.immobilienscout24.de/expose/161698060"
+        }
+      ],
+      "rentPricePerSqm": 9.88888888888889,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.1706,
+        "score": 2.07,
+        "range": {
+          "min": 8.444444444444445,
+          "max": 11.933333333333334
+        }
+      },
+      "pricePerSqm": 2777.777777777778,
+      "spPricePerSqm": 2733.3333333333335,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.22717,
+        "score": 2.57,
+        "range": {
+          "min": 2222.222222222222,
+          "max": 3555.5555555555557
+        }
+      },
+      "rentPrice": 445,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-SN"
+        ],
+        "_category": "place",
+        "_normalized_city": "Leipzig",
+        "_type": "neighbourhood",
+        "city": "Leipzig",
+        "city_district": "Nord",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "postcode": "04157",
+        "state": "Sachsen",
+        "state_code": "SN",
+        "suburb": "Gohlis-Nord",
+        "lat": 51.3738253,
+        "lon": 12.3678529,
+        "displayName": "04157 Leipzig, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Sachsen",
+      "foreClosure": false,
+      "locationFactor": {
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 38369,
+        "universityScore": 25,
+        "population": 616093,
+        "unemploymentRate": 8.6,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "unemploymentRateScore": 0
+      },
+      "grossReturn": 4.27,
+      "grossReturnCurrent": null,
+      "constructionYear": 1994,
+      "apartmentType": "APARTMENT",
+      "condition": "FULLY_RENOVATED",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": 1,
+      "numberOfFloors": 3,
+      "cellar": true,
+      "balcony": false,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T19:41:33.522Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 103500,
+          "name": "Nord",
+          "pricePerSqm": 2300,
+          "grossReturn": 4.173913043478262
+        },
+        "location": {
+          "buyingPrice": 103500,
+          "name": "Leipzig",
+          "pricePerSqm": 2300,
+          "grossReturn": 4.173913043478262
+        },
+        "similarListing": {
+          "buyingPrice": 123000,
+          "name": null,
+          "pricePerSqm": 2733.3333333333335,
+          "grossReturn": 4.341463414634146
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 101.62601626016259,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "04157",
+          "location": "Leipzig",
+          "district": "Gohlis-Mitte"
+        }
+      },
+      "originalAddress": {
+        "postcode": "04157",
+        "location": "Leipzig",
+        "district": "Gohlis-Mitte"
+      },
+      "houseMoney": 171,
+      "images": [
+        {
+          "id": "9ac9ed352b9f7a345595a10e1fd388c3",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/b91ea794-7e18-42e5-a478-6b1d173d4279-1940292206.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Keller"
+        },
+        {
+          "id": "e1da6663996abb5a968ecf12a1237cf0",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/57fdef03-3df6-4bc0-9d2c-bfddba820194-1940292208.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Grundriss"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 125000,
+          "platformName": "is24",
+          "creationDate": "2025-09-17T18:31:34.387Z"
+        },
+        {
+          "buyingPrice": 125000,
+          "platformName": "ebk",
+          "creationDate": "2025-09-23T18:39:38.558Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T08:24:14.230Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 445,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 445,
+      "hasImages": true
+    },
+    {
+      "id": "140b5937304044f607db73f388c00717",
+      "title": "Exklusives Penthouse in moderner Seniorenwohnanlage – barrierefreier Wohnkomfort auf höchstem Niveau",
+      "zip": "89165",
+      "buyingPrice": 542376,
+      "rooms": 3,
+      "squareMeter": 109.35,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-07-01T13:46:47.189Z",
+          "name": "is24",
+          "publishDate": "2025-06-30T13:49:52.000Z",
+          "active": false,
+          "id": "160143674",
+          "creationDate": "2025-06-30T13:49:52.000Z",
+          "url": "https://www.immobilienscout24.de/expose/160143674"
+        }
+      ],
+      "rentPricePerSqm": 10.379515317786923,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.21692,
+        "score": 2.48,
+        "range": {
+          "min": 8.532235939643348,
+          "max": 13.251028806584364
+        }
+      },
+      "pricePerSqm": 4960,
+      "spPricePerSqm": 3356.1957018747144,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.28936,
+        "score": 3.13,
+        "range": {
+          "min": 2606.310013717421,
+          "max": 4718.792866941016
+        }
+      },
+      "rentPrice": 1135,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BW"
+        ],
+        "_category": "place",
+        "_normalized_city": "Dietenheim",
+        "_type": "city",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Alb-Donau-Kreis",
+        "municipality": "Gemeindeverwaltungsverband Dietenheim",
+        "political_union": "European Union",
+        "postcode": "89165",
+        "state": "Baden-Württemberg",
+        "state_code": "BW",
+        "town": "Dietenheim",
+        "lat": 48.2111094,
+        "lon": 10.0700937,
+        "displayName": "89165 Dietenheim, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Baden-Württemberg",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 3.1,
+        "score": 41,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 0,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 24.677419354838708,
+        "universityScore": 0,
+        "population": 7003
+      },
+      "grossReturn": 2.51,
+      "grossReturnCurrent": null,
+      "constructionYear": 2026,
+      "apartmentType": "PENTHOUSE",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 3,
+      "numberOfFloors": 3,
+      "cellar": false,
+      "balcony": false,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T19:41:31.596Z",
+      "privateOffer": false,
+      "aggregations": {
+        "location": {
+          "buyingPrice": 338985,
+          "name": "Dietenheim",
+          "pricePerSqm": 3100,
+          "grossReturn": 3.6000000000000005
+        },
+        "similarListing": {
+          "buyingPrice": 367000,
+          "name": null,
+          "pricePerSqm": 3356.1957018747144,
+          "grossReturn": 3.7111716621253406
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 147.78637602179836,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "89165",
+          "location": "Dietenheim"
+        }
+      },
+      "originalAddress": {
+        "postcode": "89165",
+        "location": "Dietenheim"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "913bccb2ea091e414c39c1afcfda0b76",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/d5b2394a-cd76-4664-aeeb-7d1797f59ee2-1917347433.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "visuelle Ansicht"
+        },
+        {
+          "id": "66d5dbedcb646727e329a801611827f7",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/111ebc81-ae7d-4f65-91e8-0917841c2762-1917347437.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "visuelle Ansicht"
+        },
+        {
+          "id": "9a545d4c3f30f4229e66880580c13871",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/a4eb30e1-ddf1-4249-bff7-b5b406bba671-1917347442.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "visuelle Ansicht"
+        },
+        {
+          "id": "81ec39b692e52836062b62c723a1e3a7",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/c538084b-1437-4571-972b-612f3d9e4d95-1917347449.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "visuelle Ansicht"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 542376,
+          "platformName": "is24",
+          "creationDate": "2025-06-30T13:49:52.000Z"
+        },
+        {
+          "buyingPrice": 542376,
+          "platformName": "ebk",
+          "creationDate": "2025-07-01T15:24:15.439Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T08:24:08.940Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1135,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1135,
+      "hasImages": true
+    },
+    {
+      "id": "3dad366e12a658c0d2d813b8ea5ba74c",
+      "title": "Top gepflegtes Apartment in Bad Füssing",
+      "zip": "94072",
+      "buyingPrice": 44900,
+      "rooms": 1,
+      "squareMeter": 25,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-08-25T10:39:58.745Z",
+          "name": "is24",
+          "publishDate": "2025-07-03T12:41:14.000Z",
+          "active": false,
+          "id": "160210989",
+          "creationDate": "2025-07-03T12:41:14.000Z",
+          "url": "https://www.immobilienscout24.de/expose/160210989"
+        }
+      ],
+      "rentPricePerSqm": 12.64,
+      "metaSpRentPricePerSqm": {
+        "model": "08, 2025",
+        "standarderror": 0.19858,
+        "score": 2.32,
+        "range": {
+          "min": 10.56,
+          "max": 15.8
+        }
+      },
+      "pricePerSqm": 1796,
+      "spPricePerSqm": 2360,
+      "metaSpPricePerSqm": {
+        "model": "08, 2025",
+        "standarderror": 0.23155,
+        "score": 2.61,
+        "range": {
+          "min": 1920,
+          "max": 3080
+        }
+      },
+      "rentPrice": 316,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BY"
+        ],
+        "_category": "place",
+        "_normalized_city": "Bad Füssing",
+        "_type": "city",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Landkreis Passau",
+        "political_union": "European Union",
+        "postcode": "94072",
+        "state": "Bayern",
+        "state_code": "BY",
+        "town": "Bad Füssing",
+        "lat": 48.3506733,
+        "lon": 13.3095441,
+        "displayName": "94072 Bad Füssing, Deutschland"
+      },
+      "energyEfficiencyClass": "G",
+      "region": "Bayern",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 17,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 0,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 0
+      },
+      "grossReturn": 8.45,
+      "grossReturnCurrent": null,
+      "constructionYear": 1972,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": 2024,
+      "lift": true,
+      "floor": 2,
+      "numberOfFloors": 2,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:55:21.654Z",
+      "privateOffer": false,
+      "aggregations": {
+        "location": {
+          "buyingPrice": 68750,
+          "name": "Bad Füssing",
+          "pricePerSqm": 2750,
+          "grossReturn": 4.1454545454545455
+        },
+        "similarListing": {
+          "buyingPrice": 59000,
+          "name": null,
+          "pricePerSqm": 2360,
+          "grossReturn": 6.427118644067797
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 76.10169491525424,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "94072",
+          "location": "Bad Füssing"
+        }
+      },
+      "originalAddress": {
+        "postcode": "94072",
+        "location": "Bad Füssing"
+      },
+      "houseMoney": 200,
+      "images": [
+        {
+          "id": "a74700080f4aa7940d8653bf1b7c9686",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/b5a8b9a5-e42c-4cc0-8e44-501d730b7c4c-1918408106.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Aussenansicht"
+        },
+        {
+          "id": "48db4144fedab01aebd3a56ab55426ee",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/a117cd5c-19a4-4b29-96d7-4eff85c63239-1918406688.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohn-Schlafbereich"
+        },
+        {
+          "id": "5b73f58245c67aa751d356721269c672",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/29e4a243-1edb-40c7-a4e5-a4f42a0630c7-1918406806.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnbereich"
+        },
+        {
+          "id": "449eefa9ddedfef1075d276bf958c982",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/0836e24c-0668-4b14-b7e3-dee5258236b0-1918406855.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohn-Schlafbereich"
+        },
+        {
+          "id": "3e9e83d9e43191de418f218ebe69c140",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/94626b95-c0ab-4bd2-aefe-a9a94ff60bed-1918407131.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Küchenzeile"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 39500,
+          "platformName": "is24",
+          "creationDate": "2025-07-03T12:41:14.000Z"
+        },
+        {
+          "buyingPrice": 44900,
+          "platformName": "ebk",
+          "creationDate": "2025-10-21T18:06:13.482Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T06:23:11.456Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 316,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 316,
+      "hasImages": true
+    },
+    {
+      "id": "a7d4b5fc388b6753e78d73f90df743e5",
+      "title": "ToFa: top Singlewohnung an den Grünanlagen mit toller Ausst. und 2 Balkonen, EBK und Stellplatz inkl",
+      "zip": "65189",
+      "buyingPrice": 319000,
+      "rooms": 3,
+      "squareMeter": 74,
+      "comission": 5.81,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-25T14:56:28.752Z",
+          "name": "is24",
+          "publishDate": "2025-04-30T13:12:37.000Z",
+          "active": false,
+          "id": "158868017",
+          "creationDate": "2025-04-30T13:12:37.000Z",
+          "url": "https://www.immobilienscout24.de/expose/158868017"
+        }
+      ],
+      "rentPricePerSqm": 14.432432432432432,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.17202,
+        "score": 2.08,
+        "range": {
+          "min": 12.324324324324325,
+          "max": 17.43243243243243
+        }
+      },
+      "pricePerSqm": 4310.810810810811,
+      "spPricePerSqm": 4810.810810810811,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.19571,
+        "score": 2.3,
+        "range": {
+          "min": 4027.027027027027,
+          "max": 5986.486486486487
+        }
+      },
+      "rentPrice": 1068,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-HE"
+        ],
+        "_category": "building",
+        "_normalized_city": "Wiesbaden",
+        "_type": "building",
+        "city": "Wiesbaden",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "house_number": "31",
+        "political_union": "European Union",
+        "postcode": "65189",
+        "road": "Fichtestraße",
+        "state": "Hessen",
+        "state_code": "HE",
+        "suburb": "Nordost",
+        "lat": 50.0868908,
+        "lon": 8.2609924,
+        "displayName": "Fichtestraße 31, 65189 Wiesbaden, Deutschland"
+      },
+      "energyEfficiencyClass": "G",
+      "region": "Hessen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 21571,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 283083
+      },
+      "grossReturn": 4.02,
+      "grossReturnCurrent": null,
+      "constructionYear": 1972,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 4,
+      "numberOfFloors": 4,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:42:55.307Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 333000,
+          "name": "Nordost",
+          "pricePerSqm": 4500,
+          "grossReturn": 3.8666666666666667
+        },
+        "location": {
+          "buyingPrice": 310800,
+          "name": "Wiesbaden",
+          "pricePerSqm": 4200,
+          "grossReturn": 3.571428571428571
+        },
+        "similarListing": {
+          "buyingPrice": 356000,
+          "name": null,
+          "pricePerSqm": 4810.810810810811,
+          "grossReturn": 3.5999999999999996
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 89.60674157303372,
+      "oAddress": {
+        "is24": {
+          "street": "Fichtestr. 31",
+          "postcode": "65189",
+          "location": "Wiesbaden",
+          "district": "Nordost"
+        }
+      },
+      "originalAddress": {
+        "street": "Fichtestr. 31",
+        "postcode": "65189",
+        "location": "Wiesbaden",
+        "district": "Nordost"
+      },
+      "houseMoney": 368,
+      "images": [
+        {
+          "id": "4901fec6269a9f17fe63df7614887cac",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/00cd236b-e751-4c7b-b00d-592c7c502cca-1899716664.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Anlage/Balkon vorne"
+        },
+        {
+          "id": "b4a026c916210e4324075ecced57d7ca",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/71546ec5-6b21-48aa-987d-5145042d77a0-1899716666.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Objektzugang"
+        },
+        {
+          "id": "b2fe6670c45e5c55d0318fd959baf5c8",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/d0b48161-b13f-4988-a07f-b6108877a301-1899716668.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "vor der Wohnung"
+        },
+        {
+          "id": "9ee8579a096e687aa142e581aff639fc",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/afdfdffa-8dc1-47f5-9829-5713ef60e20a-1899716669.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Eingangsbereich"
+        },
+        {
+          "id": "34718987c6315a3f4ed4524e916cfa62",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/83c440cf-33db-468c-919a-ce9357ef8a14-1899716672.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Abstellkammer"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 319000,
+          "platformName": "ebk",
+          "creationDate": "2025-08-25T14:03:49.719Z"
+        },
+        {
+          "buyingPrice": 349000,
+          "platformName": "ebk",
+          "creationDate": "2025-06-17T12:44:18.928Z"
+        },
+        {
+          "buyingPrice": 349000,
+          "platformName": "is24",
+          "creationDate": "2025-04-30T13:12:37.000Z"
+        },
+        {
+          "buyingPrice": 319000,
+          "platformName": "is24",
+          "creationDate": "2025-09-18T23:56:39.485Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:36:21.961Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1068,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1068,
+      "hasImages": true
+    },
+    {
+      "id": "ef544ab4c527fced170af5f8b2756b7e",
+      "title": "WIRFINANZ: Attraktive Obergeschosswohnung mit 52.500€ KFW-Tilgungszuschuss",
+      "zip": "26131",
+      "buyingPrice": 375000,
+      "rooms": 3,
+      "squareMeter": 65.64,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-17T00:27:36.854Z",
+          "name": "is24",
+          "publishDate": "2025-09-16T14:26:55.877Z",
+          "active": false,
+          "id": "160640456",
+          "creationDate": "2025-09-16T14:26:55.877Z",
+          "url": "https://www.immobilienscout24.de/expose/160640456"
+        }
+      ],
+      "rentPricePerSqm": 11.654478976234003,
+      "metaSpRentPricePerSqm": {
+        "score": 2.19,
+        "standarderror": 0.18379,
+        "range": {
+          "min": 9.841560024375381,
+          "max": 14.29006703229738
+        },
+        "model": "05, 2025"
+      },
+      "pricePerSqm": 5712.979890310786,
+      "spPricePerSqm": 4418.037781840341,
+      "metaSpPricePerSqm": {
+        "score": 2.8,
+        "standarderror": 0.25209,
+        "range": {
+          "min": 3534.430225472273,
+          "max": 5911.02985984156
+        },
+        "model": "05, 2025"
+      },
+      "rentPrice": 765,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NI"
+        ],
+        "_category": "place",
+        "_normalized_city": "Oldenburg",
+        "_type": "neighbourhood",
+        "city": "Oldenburg",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "postcode": "26131",
+        "state": "Niedersachsen",
+        "state_code": "NI",
+        "suburb": "Eversten",
+        "lat": 53.1233865,
+        "lon": 8.1706843,
+        "displayName": "26131 Oldenburg, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Niedersachsen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 67,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 15935,
+        "unemploymentRateScore": 0,
+        "universityScore": 25,
+        "population": 172830
+      },
+      "grossReturn": 2.45,
+      "grossReturnCurrent": null,
+      "constructionYear": 2026,
+      "apartmentType": "APARTMENT",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": 1,
+      "numberOfFloors": 2,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:42:54.956Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 203484,
+          "name": "Eversten",
+          "pricePerSqm": 3100,
+          "grossReturn": 3.638709677419355
+        },
+        "location": {
+          "buyingPrice": 203484,
+          "name": "Oldenburg",
+          "pricePerSqm": 3100,
+          "grossReturn": 3.638709677419355
+        },
+        "similarListing": {
+          "buyingPrice": 290000,
+          "name": null,
+          "pricePerSqm": 4418.037781840341,
+          "grossReturn": 3.16551724137931
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 129.31034482758622,
+      "oAddress": {
+        "ebk": {
+          "street": null,
+          "postcode": "26131",
+          "location": "oldenburg",
+          "locationQuery": "26131, Oldenburg"
+        }
+      },
+      "originalAddress": {
+        "street": "",
+        "postcode": "26131",
+        "location": "oldenburg",
+        "locationQuery": "26131, Oldenburg"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "8b1fc8708c317d79d5728e5b1ee537cd",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/866a2ec8-b866-496c-a4cc-620d4a4adff1-1924264532.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Vorderansicht"
+        },
+        {
+          "id": "b4e679d16ca19874fe7ed265c47a6d05",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/6ef7f553-510c-414b-9557-7008d1ef646c-1924264531.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hinteransicht"
+        },
+        {
+          "id": "8a5d18489c5c7cc23521d277f2bac5a4",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/66572eb2-c4f1-459f-b21c-e046a76490b7-1924264529.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "WE7_Grundriss "
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 375000,
+          "platformName": "ebk",
+          "creationDate": "2025-06-17T18:44:07.145Z"
+        },
+        {
+          "buyingPrice": 375000,
+          "platformName": "is24",
+          "creationDate": "2025-07-23T13:45:06.288Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T06:11:00.596Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 765,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 765,
+      "hasImages": true
+    },
+    {
+      "id": "4fa1fefde1c6a0418d9b0f7cc208a173",
+      "title": "Ihr neues Zuhause - Lichtdurchflutete Maisonettewohnung mit einzigartiger Glasarchitektur",
+      "zip": "68753",
+      "buyingPrice": 395000,
+      "rooms": 4,
+      "squareMeter": 140.85,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-22T14:31:47.044Z",
+          "name": "is24",
+          "publishDate": "2025-05-06T07:42:40.000Z",
+          "active": false,
+          "id": "158977847",
+          "creationDate": "2025-05-06T07:42:40.000Z",
+          "url": "https://www.immobilienscout24.de/expose/158977847"
+        }
+      ],
+      "rentPricePerSqm": 9.59886403975861,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.15734,
+        "score": 1.95,
+        "range": {
+          "min": 8.292509762158325,
+          "max": 11.388001419950303
+        }
+      },
+      "pricePerSqm": 2804.4018459353924,
+      "spPricePerSqm": 2570.1100461483848,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.24462,
+        "score": 2.73,
+        "range": {
+          "min": 2066.027689030884,
+          "max": 3400.780972665957
+        }
+      },
+      "rentPrice": 1352,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BW"
+        ],
+        "_category": "place",
+        "_normalized_city": "Waghäusel",
+        "_type": "neighbourhood",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Landkreis Karlsruhe",
+        "political_union": "European Union",
+        "postcode": "68753",
+        "state": "Baden-Württemberg",
+        "state_code": "BW",
+        "town": "Waghäusel",
+        "lat": 49.2292251,
+        "lon": 8.5357772,
+        "displayName": "68753 Waghäusel, Deutschland",
+        "suburb": "Wiesental"
+      },
+      "energyEfficiencyClass": "D",
+      "region": "Baden-Württemberg",
+      "foreClosure": false,
+      "locationFactor": {
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 8.333,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "universityScore": 0,
+        "population": 21444,
+        "unemploymentRate": 4.3,
+        "score": 43,
+        "populationTrendScore": 16.664,
+        "unemploymentRateScore": 17.790697674418603
+      },
+      "grossReturn": 4.11,
+      "grossReturnCurrent": null,
+      "constructionYear": 1965,
+      "apartmentType": "MAISONETTE",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": 1,
+      "numberOfFloors": 3,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:42:54.880Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 457762.5,
+          "name": "Wiesental",
+          "pricePerSqm": 3250,
+          "grossReturn": 3.4707692307692315
+        },
+        "location": {
+          "buyingPrice": 457762.5,
+          "name": "Waghäusel",
+          "pricePerSqm": 3250,
+          "grossReturn": 3.4707692307692315
+        },
+        "similarListing": {
+          "buyingPrice": 362000,
+          "name": null,
+          "pricePerSqm": 2570.1100461483848,
+          "grossReturn": 4.481767955801105
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 109.11602209944753,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "68753",
+          "location": "Waghäusel"
+        }
+      },
+      "originalAddress": {
+        "postcode": "68753",
+        "location": "Waghäusel"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "4b19e52ae486cb7a0a2aae7d82190068",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/849c8cf1-0666-46e7-abaf-15c23993c848-1901032174.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnbereich"
+        },
+        {
+          "id": "6438091e9f1f106262728ca8de09a4ee",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/16ce4c8b-4442-4a72-8008-ae57d7eec693-1901032190.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Gartenansicht"
+        },
+        {
+          "id": "de1f35ed64523d3b2c5f945e6c69d562",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/0e9418e2-4233-4d00-98d4-4c1bf2a1e865-1901032196.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Straßenansicht"
+        },
+        {
+          "id": "c11f3515480b1a14295e02695cce4ae3",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/7e44600b-540b-4569-9e1e-b84d5d8200bb-1901032207.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Diele"
+        },
+        {
+          "id": "d8a375720de8b2b7672f0500af2f8c1a",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/459b4a4c-61e5-4778-8698-c2603566d18c-1901032210.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Wohnbereich Ansicht 1"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 395000,
+          "platformName": "immonet",
+          "creationDate": "2025-06-02T11:37:39.771Z"
+        },
+        {
+          "buyingPrice": 395000,
+          "platformName": "kip",
+          "creationDate": "2025-05-13T06:55:30.558Z"
+        },
+        {
+          "buyingPrice": 395000,
+          "platformName": "ebk",
+          "creationDate": "2025-05-06T07:58:05.227Z"
+        },
+        {
+          "buyingPrice": 395000,
+          "platformName": "is24",
+          "creationDate": "2025-05-06T07:42:40.000Z"
+        },
+        {
+          "buyingPrice": 395000,
+          "platformName": "immowelt",
+          "creationDate": "2025-06-02T11:37:39.791Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T06:11:00.717Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1352,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1352,
+      "hasImages": true
+    },
+    {
+      "id": "8faceb15267bba126b614450cdef24c2",
+      "title": "Hochwertige 3-Zimmer-Wohnung   mit Tiefgaragenstellplatz in zentraler Lage von München - Obergiesing",
+      "zip": "81549",
+      "buyingPrice": 769000,
+      "rooms": 3,
+      "squareMeter": 82,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2024-05-15T14:55:43.421Z",
+          "name": "is24",
+          "publishDate": "2023-10-06T14:13:43.000Z",
+          "active": false,
+          "id": "148854905",
+          "creationDate": "2023-10-06T14:13:43.000Z",
+          "url": "https://www.immobilienscout24.de/expose/148854905"
+        }
+      ],
+      "rentPricePerSqm": 22.146341463414632,
+      "metaSpRentPricePerSqm": {
+        "score": 1.85,
+        "standarderror": 0.14535,
+        "range": {
+          "min": 19.341463414634145,
+          "max": 25.914634146341463
+        },
+        "model": "05, 2025"
+      },
+      "pricePerSqm": 9378.048780487805,
+      "spPricePerSqm": 8231.707317073171,
+      "metaSpPricePerSqm": {
+        "score": 1.82,
+        "standarderror": 0.14199,
+        "range": {
+          "min": 7207.317073170731,
+          "max": 9585.365853658537
+        },
+        "model": "05, 2025"
+      },
+      "rentPrice": 1815.9999999999998,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-BY"
+        ],
+        "_category": "place",
+        "_type": "neighbourhood",
+        "city": "München",
+        "city_district": "Obergiesing-Fasangarten",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "political_union": "European Union",
+        "postcode": "81549",
+        "state": "Bayern",
+        "state_code": "BY",
+        "lat": 48.0979859,
+        "lon": 11.5998158,
+        "displayName": "81549 München, Deutschland",
+        "_normalized_city": "München",
+        "suburb": "Südgiesing"
+      },
+      "energyEfficiencyClass": "B",
+      "region": "Bayern",
+      "foreClosure": false,
+      "locationFactor": {
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 25,
+        "hasUniversity": true,
+        "numberOfStudents": 126643,
+        "universityScore": 25,
+        "population": 1512491,
+        "unemploymentRate": 5.6,
+        "score": 80,
+        "populationTrendScore": 16.664,
+        "unemploymentRateScore": 13.660714285714285
+      },
+      "grossReturn": 2.83,
+      "grossReturnCurrent": null,
+      "constructionYear": 2013,
+      "apartmentType": "APARTMENT",
+      "condition": "MINT_CONDITION",
+      "lastRefurbishment": null,
+      "lift": true,
+      "floor": null,
+      "numberOfFloors": 6,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:42:54.240Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 672400,
+          "name": "Obergiesing-Fasangarten",
+          "pricePerSqm": 8200,
+          "grossReturn": 2.9707317073170736
+        },
+        "location": {
+          "buyingPrice": 672400,
+          "name": "München",
+          "pricePerSqm": 8200,
+          "grossReturn": 2.9707317073170736
+        },
+        "similarListing": {
+          "buyingPrice": 675000,
+          "name": null,
+          "pricePerSqm": 8231.707317073171,
+          "grossReturn": 3.228444444444444
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 113.92592592592592,
+      "oAddress": {
+        "ivd24": {
+          "street": null,
+          "postcode": "81549",
+          "location": "München",
+          "district": "München (Kreis)"
+        },
+        "is24": {
+          "street": null,
+          "district": "Obergiesing",
+          "postcode": "81549",
+          "location": "München"
+        },
+        "immowelt": {
+          "street": null,
+          "postcode": "81549",
+          "location": "München"
+        },
+        "ebk": {
+          "street": null,
+          "locationQuery": "81549 München, Ramersdorf-Perlach",
+          "postcode": "81549",
+          "location": "münchen"
+        }
+      },
+      "originalAddress": {
+        "street": "",
+        "locationQuery": "81549 München, Ramersdorf-Perlach",
+        "postcode": "81549",
+        "location": "münchen"
+      },
+      "houseMoney": 277,
+      "images": [
+        {
+          "id": "db1183f03b6c411b810c313c156185cc",
+          "originalUrl": "https://www.ivd24immobilien.de/bilder/10/b120437/web/1708432573-101909.jpg",
+          "floorPlan": false
+        },
+        {
+          "id": "23a5a615dd2c2f5f53abed9d1e0f6cc7",
+          "originalUrl": "https://www.ivd24immobilien.de/bilder/10/b120437/web/1708432573-101913.jpg",
+          "floorPlan": false
+        },
+        {
+          "id": "5f154c9d07915679e49e987b8d334c57",
+          "originalUrl": "https://www.ivd24immobilien.de/bilder/10/b120437/web/1708432573-101915.jpg",
+          "floorPlan": false
+        },
+        {
+          "id": "b89df9ca25dd7a04bae2389471b2e684",
+          "originalUrl": "https://www.ivd24immobilien.de/bilder/10/b120437/web/1708432573-101917.jpg",
+          "floorPlan": false
+        },
+        {
+          "id": "b2a03ff0a3eda0adcdd7a9d8b2a80315",
+          "originalUrl": "https://www.ivd24immobilien.de/bilder/10/b120437/web/1708432573-101919.jpg",
+          "floorPlan": false
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 769000,
+          "platformName": "immowelt",
+          "creationDate": "2024-04-29T13:05:14.619Z"
+        },
+        {
+          "buyingPrice": 769000,
+          "platformName": "immobilien",
+          "creationDate": "2024-02-22T07:05:41.886Z"
+        },
+        {
+          "buyingPrice": 769000,
+          "platformName": "ivd24",
+          "creationDate": "2024-02-21T05:37:30.562Z"
+        },
+        {
+          "buyingPrice": 769000,
+          "platformName": "is24",
+          "creationDate": "2023-10-06T14:13:43.000Z"
+        },
+        {
+          "buyingPrice": 769000,
+          "platformName": "ebk",
+          "creationDate": "2025-06-03T10:26:06.340Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:36:21.452Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1816,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1815.9999999999998,
+      "hasImages": true
+    },
+    {
+      "id": "c99fed5286bdc1c72d634cb3dfc347a1",
+      "title": "Moderne Penthousewohnung im Herzen der Uelzener Innenstadt",
+      "zip": "29525",
+      "buyingPrice": 499000,
+      "rooms": 3,
+      "squareMeter": 115.47,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-03-13T02:10:12.923Z",
+          "name": "is24",
+          "publishDate": "2024-04-15T20:15:55.000Z",
+          "active": false,
+          "id": "150069909",
+          "creationDate": "2024-04-15T20:15:55.000Z",
+          "url": "https://www.immobilienscout24.de/expose/150069909"
+        }
+      ],
+      "rentPricePerSqm": 9.734130077076298,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.13157,
+        "score": 1.73,
+        "range": {
+          "min": 8.599636269160822,
+          "max": 11.206373949943709
+        }
+      },
+      "pricePerSqm": 4321.468779769637,
+      "spPricePerSqm": 2589.4171646315062,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.19961,
+        "score": 2.33,
+        "range": {
+          "min": 2156.404260846973,
+          "max": 3230.2762622326145
+        }
+      },
+      "rentPrice": 1124,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NI"
+        ],
+        "_category": "road",
+        "_normalized_city": "Uelzen",
+        "_type": "road",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Uelzen",
+        "political_union": "European Union",
+        "postcode": "29525",
+        "road": "Schuhstraße",
+        "road_type": "residential",
+        "state": "Niedersachsen",
+        "state_code": "NI",
+        "town": "Uelzen",
+        "lat": 52.9639843,
+        "lon": 10.5611264,
+        "displayName": "Schuhstraße, 29525 Uelzen, Deutschland",
+        "suburb": "Veerßen"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Niedersachsen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 29,
+        "populationTrendScore": 12.498000000000001,
+        "populationTrend": {
+          "from": -10,
+          "to": -5
+        },
+        "populationScore": 16.66,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 33934
+      },
+      "grossReturn": 2.7,
+      "grossReturnCurrent": null,
+      "constructionYear": 2024,
+      "apartmentType": "ROOF_STOREY",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": 4,
+      "numberOfFloors": null,
+      "cellar": false,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:06:12.704Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 230940,
+          "name": "Veerßen",
+          "pricePerSqm": 2000,
+          "grossReturn": 4.02
+        },
+        "location": {
+          "buyingPrice": 225166.5,
+          "name": "Uelzen",
+          "pricePerSqm": 1950,
+          "grossReturn": 4.123076923076923
+        },
+        "similarListing": {
+          "buyingPrice": 299000,
+          "name": null,
+          "pricePerSqm": 2589.4171646315062,
+          "grossReturn": 4.511036789297659
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 166.8896321070234,
+      "oAddress": {
+        "is24": {
+          "street": "Schuhstraße 10",
+          "postcode": "29525",
+          "location": "Uelzen"
+        },
+        "ebk": {
+          "street": "schuhstraße 10",
+          "locationQuery": "Schuhstraße 10, 29525, Uelzen",
+          "postcode": "29525",
+          "location": "uelzen"
+        }
+      },
+      "originalAddress": {
+        "street": "Schuhstraße 10",
+        "postcode": "29525",
+        "location": "Uelzen"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "5458d1a780bc2b8726ce86b923debdf9",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/76951ddb-ce24-4e8e-b840-cd3b023920eb-1792337014.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Projektbild"
+        },
+        {
+          "id": "0219191dce5499d8b53252dfbbd66553",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/86e20cef-14e7-46e0-a2b7-fdca0de15b64-1792337017.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Objektansicht"
+        },
+        {
+          "id": "48ed0abf3abe4c028cacf0a1b121b9a3",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/681d837e-d328-4381-b4d4-159efe427bc3-1792337021.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Schuhstraße"
+        },
+        {
+          "id": "860d7085799b495bbc1814bbc153af2b",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/6ffe40af-d594-40bc-bfc4-2471b082a259-1792337025.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Veerßer Straße"
+        },
+        {
+          "id": "2ae818c511ca13ea6a6c128c7edcd564",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/66902724-7a38-4606-b4e2-4e73260264ed-1792337029.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Innenhof"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 499000,
+          "platformName": "is24",
+          "creationDate": "2024-04-15T20:15:55.000Z"
+        },
+        {
+          "buyingPrice": 499000,
+          "platformName": "ebk",
+          "creationDate": "2024-06-28T18:50:38.636Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:04:01.150Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1124,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1124,
+      "hasImages": true
+    },
+    {
+      "id": "3cf448791621fe90f849e44d55a99779",
+      "title": "Moderne Etagenwohnung im Herzen der Uelzener Innenstadt",
+      "zip": "29525",
+      "buyingPrice": 455000,
+      "rooms": 3,
+      "squareMeter": 112.4,
+      "comission": null,
+      "platforms": [
+        {
+          "deactivationDate": "2025-03-13T02:10:46.798Z",
+          "name": "is24",
+          "publishDate": "2024-04-15T20:12:09.000Z",
+          "active": false,
+          "id": "150069875",
+          "creationDate": "2024-04-15T20:12:09.000Z",
+          "url": "https://www.immobilienscout24.de/expose/150069875"
+        }
+      ],
+      "rentPricePerSqm": 9.777580071174377,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.13098,
+        "score": 1.72,
+        "range": {
+          "min": 8.647686832740213,
+          "max": 11.254448398576512
+        }
+      },
+      "pricePerSqm": 4048.0427046263344,
+      "spPricePerSqm": 2580.071174377224,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.20043,
+        "score": 2.34,
+        "range": {
+          "min": 2153.0249110320283,
+          "max": 3229.5373665480424
+        }
+      },
+      "rentPrice": 1099,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NI"
+        ],
+        "_category": "road",
+        "_normalized_city": "Uelzen",
+        "_type": "road",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Uelzen",
+        "political_union": "European Union",
+        "postcode": "29525",
+        "road": "Hutmacherstraße",
+        "road_type": "residential",
+        "state": "Niedersachsen",
+        "state_code": "NI",
+        "suburb": "Veerßen",
+        "town": "Uelzen",
+        "lat": 52.9644554,
+        "lon": 10.5611839,
+        "displayName": "Hutmacherstraße, 29525 Uelzen, Deutschland"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Niedersachsen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 29,
+        "populationTrendScore": 12.498000000000001,
+        "populationTrend": {
+          "from": -10,
+          "to": -5
+        },
+        "populationScore": 16.66,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 33934
+      },
+      "grossReturn": 2.9,
+      "grossReturnCurrent": null,
+      "constructionYear": 2024,
+      "apartmentType": "APARTMENT",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": 2,
+      "numberOfFloors": null,
+      "cellar": false,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T18:06:12.068Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 224800,
+          "name": "Veerßen",
+          "pricePerSqm": 2000,
+          "grossReturn": 4.02
+        },
+        "location": {
+          "buyingPrice": 219180,
+          "name": "Uelzen",
+          "pricePerSqm": 1950,
+          "grossReturn": 4.123076923076923
+        },
+        "similarListing": {
+          "buyingPrice": 290000,
+          "name": null,
+          "pricePerSqm": 2580.071174377224,
+          "grossReturn": 4.547586206896552
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 156.89655172413794,
+      "oAddress": {
+        "is24": {
+          "street": "Hutmacherstraße 6",
+          "postcode": "29525",
+          "location": "Uelzen"
+        }
+      },
+      "originalAddress": {
+        "street": "Hutmacherstraße 6",
+        "postcode": "29525",
+        "location": "Uelzen"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "eb1ece1d2f69a57924c25a815d877e6c",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/45979502-09b3-4cc5-baa9-6740a3934f8f-1792336647.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Projektbild"
+        },
+        {
+          "id": "2135c2bdce3c8ca8723dbc4d18485901",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/07586336-d720-4587-873d-2f3a7dea5a20-1792336655.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Objektansicht"
+        },
+        {
+          "id": "1683ed4d46a475833ab7d7fca4352252",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/547c7496-dc98-45c4-84d2-882780ac770e-1792336664.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Schuhstraße"
+        },
+        {
+          "id": "5649a7adb98cf72dd00b703d7048643d",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/081295c6-abb2-4be2-88dd-9c7ab1e7ed1b-1792336674.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Veerßer Straße"
+        },
+        {
+          "id": "6768d020e6314b0c04c5e49a2b0c6df9",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/acdf1c44-59bf-447a-91a8-3b0066f06fcb-1792336679.png/ORIG/resize/1024x1024/format/jpg",
+          "title": "Ansicht Innenhof"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 455000,
+          "platformName": "is24",
+          "creationDate": "2024-04-15T20:12:09.000Z"
+        },
+        {
+          "buyingPrice": 455000,
+          "platformName": "ebk",
+          "creationDate": "2024-06-28T18:50:49.750Z"
+        }
+      ],
+      "priceReduced": false,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:04:04.643Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 1099,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 1099,
+      "hasImages": true
+    },
+    {
+      "id": "463e8c5722387d98c0b656d28c09c5d8",
+      "title": "Döse: 3-Zi. Wohnung in toller Lage",
+      "zip": "27476",
+      "buyingPrice": 149000,
+      "rooms": 3,
+      "squareMeter": 67,
+      "comission": 1,
+      "platforms": [
+        {
+          "deactivationDate": "2025-03-28T13:34:46.409Z",
+          "name": "is24",
+          "publishDate": "2023-12-01T13:04:54.000Z",
+          "active": false,
+          "id": "147747432",
+          "creationDate": "2023-12-01T13:04:54.000Z",
+          "url": "https://www.immobilienscout24.de/expose/147747432"
+        }
+      ],
+      "rentPricePerSqm": 8.656716417910447,
+      "metaSpRentPricePerSqm": {
+        "score": 1.95,
+        "standarderror": 0.15702,
+        "range": {
+          "min": 7.492537313432836,
+          "max": 10.26865671641791
+        },
+        "model": "06, 2025"
+      },
+      "pricePerSqm": 2223.8805970149256,
+      "spPricePerSqm": 2731.3432835820895,
+      "metaSpPricePerSqm": {
+        "score": 2.57,
+        "standarderror": 0.2268,
+        "range": {
+          "min": 2223.8805970149256,
+          "max": 3537.313432835821
+        },
+        "model": "06, 2025"
+      },
+      "rentPrice": 580,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NI"
+        ],
+        "_category": "place",
+        "_type": "neighbourhood",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Landkreis Cuxhaven",
+        "political_union": "European Union",
+        "postcode": "27476",
+        "state": "Niedersachsen",
+        "state_code": "NI",
+        "town": "Cuxhaven",
+        "lat": 53.8490848,
+        "lon": 8.6182194,
+        "displayName": "27476 Cuxhaven, Deutschland",
+        "_normalized_city": "Cuxhaven",
+        "suburb": "Sahlenburg"
+      },
+      "energyEfficiencyClass": "A",
+      "region": "Niedersachsen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 33,
+        "populationTrendScore": 16.664,
+        "populationTrend": {
+          "from": -5,
+          "to": 5
+        },
+        "populationScore": 16.66,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 48562
+      },
+      "grossReturn": 4.67,
+      "grossReturnCurrent": null,
+      "constructionYear": 1968,
+      "apartmentType": "APARTMENT",
+      "condition": "WELL_KEPT",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": null,
+      "numberOfFloors": null,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T17:17:47.767Z",
+      "privateOffer": false,
+      "aggregations": {
+        "district": {
+          "buyingPrice": 254600,
+          "name": "Sahlenburg",
+          "pricePerSqm": 3800,
+          "grossReturn": 2.68421052631579
+        },
+        "location": {
+          "buyingPrice": 254600,
+          "name": "Cuxhaven",
+          "pricePerSqm": 3800,
+          "grossReturn": 2.68421052631579
+        },
+        "similarListing": {
+          "buyingPrice": 183000,
+          "name": null,
+          "pricePerSqm": 2731.3432835820895,
+          "grossReturn": 3.8032786885245904
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 81.42076502732242,
+      "oAddress": {
+        "is24": {
+          "street": null,
+          "postcode": "27476",
+          "location": "Cuxhaven"
+        },
+        "ebk": {
+          "street": null,
+          "locationQuery": "27476, Cuxhaven",
+          "postcode": "27476",
+          "location": "cuxhaven"
+        }
+      },
+      "originalAddress": {
+        "postcode": "27476",
+        "location": "Cuxhaven"
+      },
+      "houseMoney": 203,
+      "images": [
+        {
+          "id": "30f9f3a7eeb41c0176be963cb8f768c8",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/0863af85-d2f2-4035-9aa4-172ba4cc8050-1686428187.jpeg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Hausansicht"
+        },
+        {
+          "id": "3580e7243852753a622c102a95505888",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/ee7d18a6-1a4b-4664-8d86-27afb563d76e-1686428231.jpeg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Eingangsbereich"
+        },
+        {
+          "id": "20f1c912a923c5fb3a487071a9705221",
+          "originalUrl": "https://pictures.immobilienscout24.de/listings/c39207d2-a38f-43db-9e66-9875707b4e83-1686428308.jpg/ORIG/resize/1024x1024/format/jpg",
+          "title": "Grundriss nah"
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 149000,
+          "platformName": "is24",
+          "creationDate": "2024-08-05T07:58:39.489Z"
+        },
+        {
+          "buyingPrice": 179000,
+          "platformName": "ebk",
+          "creationDate": "2023-12-02T11:49:23.070Z"
+        },
+        {
+          "buyingPrice": 179000,
+          "platformName": "is24",
+          "creationDate": "2023-12-01T13:04:54.000Z"
+        },
+        {
+          "buyingPrice": 149000,
+          "platformName": "ebk",
+          "creationDate": "2024-08-27T17:12:45.777Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:04:35.889Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 580,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 580,
+      "hasImages": true
+    },
+    {
+      "id": "92a3c20ba9b3908a2c046f71f5ca11f6",
+      "title": "SCHADE IMMOBILIEN - Erstbezug nach Kernsanierung! Top-moderne ETW mit Traum-Ausblick!",
+      "zip": "58791",
+      "buyingPrice": 199900,
+      "rooms": 4,
+      "squareMeter": 116.65,
+      "comission": 3.57,
+      "platforms": [
+        {
+          "deactivationDate": "2025-09-10T09:38:48.247Z",
+          "name": "is24",
+          "publishDate": "2025-08-23T08:51:22.000Z",
+          "active": false,
+          "id": "161205085",
+          "creationDate": "2025-08-23T08:51:22.000Z",
+          "url": "https://www.immobilienscout24.de/expose/161205085"
+        }
+      ],
+      "rentPricePerSqm": 6.335190741534505,
+      "metaSpRentPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.15746,
+        "score": 1.96,
+        "range": {
+          "min": 5.469352764680669,
+          "max": 7.518216888126875
+        }
+      },
+      "pricePerSqm": 1713.6733819117017,
+      "spPricePerSqm": 1311.6159451350193,
+      "metaSpPricePerSqm": {
+        "model": "06, 2025",
+        "standarderror": 0.25173,
+        "score": 2.79,
+        "range": {
+          "min": 1045.8636948135447,
+          "max": 1757.3939134162022
+        }
+      },
+      "rentPrice": 739,
+      "rentPriceCurrent": null,
+      "rentPriceCurrentPerSqm": null,
+      "address": {
+        "ISO_3166-1_alpha-2": "DE",
+        "ISO_3166-1_alpha-3": "DEU",
+        "ISO_3166-2": [
+          "DE-NW"
+        ],
+        "_category": "place",
+        "_normalized_city": "Werdohl",
+        "_type": "city",
+        "continent": "Europe",
+        "country": "Deutschland",
+        "country_code": "de",
+        "county": "Märkischer Kreis",
+        "political_union": "European Union",
+        "postcode": "58791",
+        "state": "Nordrhein-Westfalen",
+        "state_code": "NW",
+        "town": "Werdohl",
+        "lat": 51.257732,
+        "lon": 7.7642148,
+        "displayName": "58791 Werdohl, Deutschland"
+      },
+      "energyEfficiencyClass": "D",
+      "region": "Nordrhein-Westfalen",
+      "foreClosure": false,
+      "locationFactor": {
+        "unemploymentRate": 0,
+        "score": 21,
+        "populationTrendScore": 12.498000000000001,
+        "populationTrend": {
+          "from": -10,
+          "to": -5
+        },
+        "populationScore": 8.333,
+        "hasUniversity": false,
+        "numberOfStudents": 0,
+        "unemploymentRateScore": 0,
+        "universityScore": 0,
+        "population": 17827
+      },
+      "grossReturn": 4.44,
+      "grossReturnCurrent": null,
+      "constructionYear": 1970,
+      "apartmentType": "APARTMENT",
+      "condition": "FIRST_TIME_USE",
+      "lastRefurbishment": null,
+      "lift": false,
+      "floor": 2,
+      "numberOfFloors": 1,
+      "cellar": true,
+      "balcony": true,
+      "garden": false,
+      "active": true,
+      "rented": false,
+      "publishDate": "2025-10-21T17:17:47.694Z",
+      "privateOffer": false,
+      "aggregations": {
+        "location": {
+          "buyingPrice": 163310,
+          "name": "Werdohl",
+          "pricePerSqm": 1400,
+          "grossReturn": 4.885714285714286
+        },
+        "similarListing": {
+          "buyingPrice": 153000,
+          "name": null,
+          "pricePerSqm": 1311.6159451350193,
+          "grossReturn": 5.796078431372549
+        }
+      },
+      "leasehold": false,
+      "priceInMarket": 130.65359477124184,
+      "oAddress": {
+        "ebk": {
+          "street": null,
+          "postcode": "58791",
+          "location": "werdohl",
+          "locationQuery": "58791, Werdohl"
+        }
+      },
+      "originalAddress": {
+        "street": "",
+        "postcode": "58791",
+        "location": "werdohl",
+        "locationQuery": "58791, Werdohl"
+      },
+      "houseMoney": null,
+      "images": [
+        {
+          "id": "84deea16f7f7eaefd5bf6e409b86deff",
+          "originalUrl": "https://img.kleinanzeigen.de/api/v1/prod-ads/images/1d/1d8a5df4-176a-4058-a49b-7e156b86d32d?rule=$_59.AUTO",
+          "title": "SCHADE IMMOBILIEN - Erstbezug nach Kernsanierung! Top-moderne ETW mit Traum-Ausblick! in Werdohl",
+          "floorPlan": false
+        }
+      ],
+      "buyingPriceHistory": [
+        {
+          "buyingPrice": 199900,
+          "platformName": "immonet",
+          "creationDate": "2025-09-22T14:56:31.770Z"
+        },
+        {
+          "buyingPrice": 229000,
+          "platformName": "is24",
+          "creationDate": "2025-08-23T08:51:22.000Z"
+        },
+        {
+          "buyingPrice": 229000,
+          "platformName": "immonet",
+          "creationDate": "2025-07-23T06:37:39.155Z"
+        },
+        {
+          "buyingPrice": 229000,
+          "platformName": "immowelt",
+          "creationDate": "2025-07-23T06:33:46.263Z"
+        },
+        {
+          "buyingPrice": 229000,
+          "platformName": "ebk",
+          "creationDate": "2025-07-23T06:29:43.096Z"
+        },
+        {
+          "buyingPrice": 199900,
+          "platformName": "ebk",
+          "creationDate": "2025-10-21T17:17:47.694Z"
+        }
+      ],
+      "priceReduced": true,
+      "priceIncreased": false,
+      "runningTime": 0,
+      "lastUpdatedAt": "2025-10-22T05:04:13.798Z",
+      "favorite": 0,
+      "favoriteDate": null,
+      "cashFlow": 739,
+      "ownCapitalReturn": null,
+      "cashFlowPerLivingUnit": 739,
+      "hasImages": true
+    }
+  ],
+  "aggregations": {
+    "platforms.name.keyword": {
+      "doc_count_error_upper_bound": 0,
+      "sum_other_doc_count": 0,
+      "buckets": [
+        {
+          "key": "is24",
+          "doc_count": 87022
+        },
+        {
+          "key": "immowelt",
+          "doc_count": 29763
+        },
+        {
+          "key": "ebk",
+          "doc_count": 29539
+        },
+        {
+          "key": "immonet",
+          "doc_count": 27441
+        },
+        {
+          "key": "DeinNeuesZuhause",
+          "doc_count": 8459
+        },
+        {
+          "key": "immobilien",
+          "doc_count": 5380
+        },
+        {
+          "key": "kip",
+          "doc_count": 4167
+        },
+        {
+          "key": "ivd24",
+          "doc_count": 3675
+        },
+        {
+          "key": "immobilio",
+          "doc_count": 2585
+        },
+        {
+          "key": "ohnemakler",
+          "doc_count": 1403
+        },
+        {
+          "key": "reedb",
+          "doc_count": 720
+        },
+        {
+          "key": "immoparadise",
+          "doc_count": 546
+        },
+        {
+          "key": "cleverimmobilien",
+          "doc_count": 516
+        },
+        {
+          "key": "meinestadt",
+          "doc_count": 481
+        },
+        {
+          "key": "immo4trans",
+          "doc_count": 344
+        },
+        {
+          "key": "bellevue",
+          "doc_count": 304
+        },
+        {
+          "key": "immostar",
+          "doc_count": 247
+        },
+        {
+          "key": "immogeno",
+          "doc_count": 212
+        },
+        {
+          "key": "privateimmobilienangebote",
+          "doc_count": 165
+        },
+        {
+          "key": "immobilienmarkt1a",
+          "doc_count": 130
+        },
+        {
+          "key": "wohnungsboerse",
+          "doc_count": 127
+        },
+        {
+          "key": "vrwohnen",
+          "doc_count": 89
+        },
+        {
+          "key": "sueddeutsche",
+          "doc_count": 69
+        },
+        {
+          "key": "wohnungjetzt",
+          "doc_count": 55
+        },
+        {
+          "key": "immoanzeigen24",
+          "doc_count": 23
+        },
+        {
+          "key": "faz",
+          "doc_count": 19
+        },
+        {
+          "key": "immosocial24",
+          "doc_count": 19
+        },
+        {
+          "key": "saechsischezeitung",
+          "doc_count": 19
+        },
+        {
+          "key": "immoticket24",
+          "doc_count": 1
+        }
+      ]
+    },
+    "buyingPrice": {
+      "value": 419555.9137003874
+    },
+    "pricePerSqm": {
+      "value": 4820.801388986923
+    },
+    "squareMeter": {
+      "value": 86.55430292041294
+    },
+    "constructionYear": {
+      "value": 1980.6468455312724
+    },
+    "rentPrice": {
+      "value": 1053.2529943965997
+    },
+    "rentPricePerSqm": {
+      "value": 12.074016608545747
+    },
+    "runningTime": {
+      "value": 130.97866398058696
+    },
+    "averagePerWeek": {
+      "value": 1520.2692307692307
+    }
+  }
+}

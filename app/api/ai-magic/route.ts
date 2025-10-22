@@ -1,157 +1,305 @@
 // app/api/ai-magic/route.ts
-import { NextRequest } from 'next/server';
-import OpenAI from 'openai';
-import { createClient } from '@supabase/supabase-js';
+import {NextRequest, NextResponse} from 'next/server';
+import fs from 'fs';
+import path from 'path';
+import {mkdir, writeFile} from 'fs/promises';
 
-export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
+
+const DATA_PATH = path.join(process.cwd(), 'public', 'data.json');
+const OUT_PATH = path.join(process.cwd(), 'public', 'data_refined.json');
+const CACHE_DIR = path.join(process.cwd(), '.cache', 'images');
+const CONCURRENCY = 3;
+
+// Modell und API-URL für Azure OpenAI
+const OPENAI_MODEL = "gpt-4o"; // oder z.B. "gpt-4o-mini"
+const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview`;
 
 type Listing = {
-    id: string;
+    id: string | number;
     title?: string;
-    zip?: string;
-    buyingPrice?: number;
-    rooms?: number;
-    squareMeter?: number;
-    pricePerSqm?: number;
-    rentPrice?: number;
-    images?: { id: string; originalUrl: string; title?: string }[];
-    ai_metadata?: any;
+    images?: string[];
+    [k: string]: any;
 };
 
-const MAX_IMAGES = 8;
+type ImageAnalysis = {
+    floorType: string;
+    brightnessCategory: string;
+    brightnessScore: number; // 0-100
+    confidence: number; // 0-1
+    notes?: string;
+};
 
-function getSupabase() {
-    const url = process.env.SUPABASE_URL!;
-    const key = process.env.SUPABASE_SERVICE_ROLE_KEY!;
-    return createClient(url, key, {
-        auth: { persistSession: false },
-    });
-}
-
-const openai = new OpenAI({
-    apiKey: process.env.OPENAI_API_KEY!,
-});
-
-export async function POST(req: NextRequest) {
-    try {
-        const supabase = getSupabase();
-        const { searchParams } = new URL(req.url);
-        const limit = Number(searchParams.get('limit') ?? '3');
-
-        // 1. Aus Supabase lesen (Inserate ohne ai_metadata)
-        const { data: listings, error } = await supabase
-            .from('listings')
-            .select('*')
-            .is('ai_metadata', null)
-            .limit(limit);
-
-        if (error) {
-            return responseJson(500, { error: 'Supabase Select Fehler', details: error.message });
-        }
-        if (!listings || listings.length === 0) {
-            return responseJson(200, { processed: [], message: 'Keine neuen Inserate' });
-        }
-
-        const processed: string[] = [];
-        const failures: { id: string; error: string }[] = [];
-
-        for (const listing of listings as Listing[]) {
-            try {
-                const images = (listing.images || []).slice(0, MAX_IMAGES);
-                if (images.length === 0) {
-                    failures.push({ id: listing.id, error: 'Keine Bilder' });
-                    continue;
-                }
-
-                // 2. Bilder vorbereiten für Vision Prompt
-                const imageParts = images.map(img => ({
-                    type: 'image_url' as const,
-                    image_url: { url: img.originalUrl }
-                }));
-
-                // 3. ChatGPT Vision Aufruf mit strukturiertem Schema
-                const schema = {
-                    name: 'ListingMetadata',
-                    schema: {
-                        type: 'object',
-                        properties: {
-                            id: { type: 'string' },
-                            summary: { type: 'string' },
-                            quality_score: { type: 'number' },
-                            condition_estimate: { type: 'string' },
-                            notable_features: { type: 'array', items: { type: 'string' } },
-                            potential_issues: { type: 'array', items: { type: 'string' } },
-                            staging_quality: { type: 'integer' },
-                            investment_angle: { type: 'string' },
-                            recommended_actions: { type: 'array', items: { type: 'string' } },
-                            detected_energy_efficiency_hints: { type: 'array', items: { type: 'string' } },
-                        },
-                        required: ['id','summary','quality_score','notable_features'],
-                        additionalProperties: false
-                    }
-                };
-
-                const userText =
-                    `Analysiere die Bilder eines Immobilieninserats und gib strukturiertes JSON zurück.\n` +
-                    `Basisdaten:\n` +
-                    `Titel: ${listing.title ?? ''}\nPLZ: ${listing.zip ?? ''}\nKaufpreis: ${listing.buyingPrice ?? ''}\n` +
-                    `Wohnfläche: ${listing.squareMeter ?? ''} / Zimmer: ${listing.rooms ?? ''}\nPreis/m²: ${listing.pricePerSqm ?? ''}\n` +
-                    `Miete: ${listing.rentPrice ?? ''}\n` +
-                    `Erstelle prägnante Zusammenfassung (max 40 Wörter).\nVermeide Halluzinationen, nutze "Unbekannt" falls nicht sicher.`;
-
-                const completion = await openai.chat.completions.create({
-                    model: 'gpt-4o-mini',
-                    temperature: 0.2,
-                    messages: [
-                        {
-                            role: 'system',
-                            content:
-                                'Du bist ein präziser Immobilien Vision Assistent. Antworte ausschließlich im gewünschten JSON Schema ohne zusätzliche Erklärungen.'
-                        },
-                        {
-                            role: 'user',
-                            content: [
-                                { type: 'text', text: userText },
-                                ...imageParts
-                            ]
-                        }
-                    ],
-                    response_format: { type: 'json_schema', json_schema: schema }
-                });
-
-                const raw = completion.choices[0]?.message?.content;
-                if (!raw) throw new Error('Leere AI Antwort');
-
-                const metadata = JSON.parse(raw);
-                metadata.source_model = completion.model;
-                metadata.created_at = new Date().toISOString();
-
-                // 4. Speichern in Supabase
-                const { error: upErr } = await supabase
-                    .from('listings')
-                    .update({
-                        ai_metadata: metadata,
-                        ai_processed_at: new Date().toISOString()
-                    })
-                    .eq('id', listing.id);
-
-                if (upErr) throw new Error('Update Fehler: ' + upErr.message);
-
-                processed.push(listing.id);
-            } catch (e: any) {
-                failures.push({ id: listing.id, error: e.message });
-            }
-        }
-
-        return responseJson(200, { processed, failures });
-    } catch (e: any) {
-        return responseJson(500, { error: 'Unerwarteter Fehler', details: e.message });
+async function ensureCacheDir() {
+    if (!fs.existsSync(CACHE_DIR)) {
+        await mkdir(CACHE_DIR, {recursive: true});
     }
 }
 
-function responseJson(status: number, body: any) {
-    return new Response(JSON.stringify(body), {
-        status,
-        headers: { 'Content-Type': 'application/json' }
+function safeFileName(url: string, idx: number) {
+    const u = new URL(url);
+    const base = path.basename(u.pathname).split('?')[0] || `img_${idx}.jpg`;
+    return base.replace(/[^a-zA-Z0-9._-]/g, '_');
+}
+
+async function downloadImage(url: string, idx: number): Promise<string> {
+    const fname = safeFileName(url, idx);
+    const full = path.join(CACHE_DIR, fname);
+    if (fs.existsSync(full) && fs.statSync(full).size > 100) {
+        return full;
+    }
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`Bild Download fehlgeschlagen: ${url}`);
+    const arrayBuf = await res.arrayBuffer();
+    await writeFile(full, Buffer.from(arrayBuf));
+    return full;
+}
+
+// Azure OpenAI REST API Call
+async function analyzeImage(imageUrl: string): Promise<ImageAnalysis> {
+    const prompt = `
+Analysiere das Foto einer Wohnung für:
+1. Bodenart (z.B. Parkett, Laminat, Fliesen, Teppich, Beton, Vinyl, Mischform).
+2. Helligkeitseindruck (dunkel, mittel, hell, sehr hell) basierend auf wahrgenommener natürlichen + künstlichen Lichtquellen.
+3. Skaliere Helligkeit 0-100 (0=sehr dunkel, 100=extrem hell).
+4. Vertrauen 0-1.
+Antworte NUR als kompaktes JSON:
+{
+ "floorType": "...",
+ "brightnessCategory": "...",
+ "brightnessScore": <number>,
+ "confidence": <number>,
+ "notes": "kurze optionale Bemerkung"
+}
+Wenn unsicher: floorType="unknown".
+`;
+
+    const body = {
+        messages: [
+            {
+                role: "system",
+                content: [
+                    {
+                        type: "text",
+                        text: "Du bist ein präzises Vision-Analyse-Modul."
+                    }
+                ]
+            },
+            {
+                role: "user",
+                content: [
+                    {type: "text", text: prompt},
+                    {type: "image_url", image_url: {url: imageUrl}}
+                ]
+            }
+        ],
+        temperature: 0.2,
+        top_p: 0.95,
+        max_tokens: 512,
+        response_format: {type: "json_object"}
+    };
+
+    try {
+        const testRes = await fetch("https://www.google.com");
+        if (!testRes.ok) {
+            console.error("Netzwerk-Test fehlgeschlagen:", testRes.status, testRes.statusText);
+        }
+    } catch (e) {
+        console.error("Netzwerk-Test-Fehler:", e);
+    }
+
+    let res: any;
+    try {
+        res = await fetch(OPENAI_API_URL, {
+            method: "POST",
+            headers: {
+                "api-key": process.env.OPENAI_API_KEY!,
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(body),
+        });
+    } catch (e) {
+        console.error("Fetch-Fehler beim Aufruf der OpenAI-API:", e);
+        throw e;
+    }
+    if (!res.ok) {
+        const err = await res.text();
+        return {
+            floorType: 'unknown',
+            brightnessCategory: 'unknown',
+            brightnessScore: 0,
+            confidence: 0,
+            notes: 'Error: ' + err,
+        };
+    }
+
+    const resp = await res.json();
+    // Die Antwortstruktur ist wie bei OpenAI, aber choices[0].message.content enthält das JSON
+    const raw = resp.choices?.[0]?.message?.content || '{}';
+    try {
+        const parsed = JSON.parse(raw);
+        return {
+            floorType: parsed.floorType ?? 'unknown',
+            brightnessCategory: parsed.brightnessCategory ?? 'unknown',
+            brightnessScore: Number(parsed.brightnessScore) || 0,
+            confidence: Number(parsed.confidence) || 0,
+            notes: parsed.notes,
+        };
+    } catch (e) {
+        console.error("Parse-Fehler:", e, "Antwort:", raw);
+        return {
+            floorType: 'unknown',
+            brightnessCategory: 'unknown',
+            brightnessScore: 0,
+            confidence: 0,
+            notes: 'ParseError',
+        };
+    }
+}
+
+type RawImage = { id: string; originalUrl: string; title?: string };
+
+async function loadListings(): Promise<Listing[]> {
+    if (!fs.existsSync(DATA_PATH)) throw new Error('data.json fehlt');
+    const raw = await fs.promises.readFile(DATA_PATH, 'utf-8');
+    const json = JSON.parse(raw);
+    if (Array.isArray(json)) return json.map(normalizeListing);
+    if (Array.isArray(json.results)) return json.results.map(normalizeListing);
+    throw new Error('Unbekanntes Format: erwartet Array oder Objekt mit results[]');
+}
+
+function normalizeListing(l: any): Listing {
+    const rawImages: RawImage[] = Array.isArray(l.images) ? l.images : [];
+    const imageUrls = rawImages
+        .map(img => img?.originalUrl)
+        .filter((u: any) => typeof u === 'string' && u.startsWith('http'));
+    return {
+        ...l,
+        _rawImages: rawImages,
+        images: imageUrls
+    };
+}
+
+function pLimit<T>(concurrency: number) {
+    let active = 0;
+    const queue: (() => void)[] = [];
+    const next = () => {
+        active--;
+        if (queue.length) {
+            const fn = queue.shift();
+            fn && fn();
+        }
+    };
+    return <U>(fn: () => Promise<U>): Promise<U> =>
+        new Promise((resolve, reject) => {
+            const run = () => {
+                active++;
+                fn()
+                    .then((v) => {
+                        next();
+                        resolve(v);
+                    })
+                    .catch((e) => {
+                        next();
+                        reject(e);
+                    });
+            };
+            if (active < concurrency) run();
+            else queue.push(run);
+        });
+}
+
+async function analyzeListing(listing: Listing): Promise<Listing> {
+    const images = listing.images || [];
+    if (!images.length) return {...listing, _analysis: []};
+    const results: ImageAnalysis[] = [];
+
+    for (let i = 0; i < Math.min(20, images.length); i++) {
+        const imgUrl = images[i];
+        const attempt = async (): Promise<ImageAnalysis> => {
+            try {
+                // Optional: lokales Caching erzwingen (auskommentiert, falls nicht notwendig)
+                //await downloadImage(imgUrl, i);
+                return await analyzeImage(imgUrl);
+            } catch (e) {
+                console.log(e)
+                return {
+                    floorType: 'unknown',
+                    brightnessCategory: 'unknown',
+                    brightnessScore: 0,
+                    confidence: 0,
+                    notes: 'Error: ' + (e as Error).message,
+                };
+            }
+        };
+        results.push(await attempt());
+    }
+
+    // Aggregation (einfacher Majority / Mittelwert)
+    const floorCounts: Record<string, number> = {};
+    results.forEach((r) => {
+        if (r.floorType !== 'unknown') {
+            floorCounts[r.floorType] = (floorCounts[r.floorType] || 0) + 1;
+        }
     });
+    const dominantFloor =
+        Object.entries(floorCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'unknown';
+    const avgBrightness =
+        results.reduce((sum, r) => sum + (r.brightnessScore || 0), 0) /
+        (results.length || 1);
+
+    return {
+        ...listing,
+        ai: {
+            dominantFloor,
+            avgBrightness: Math.round(avgBrightness),
+            perImage: results,
+            analyzedAt: new Date().toISOString(),
+        },
+    };
+}
+
+async function refineAll() {
+    const listings = await loadListings();
+    await ensureCacheDir();
+
+    const out: Listing[] = [];
+    for (const l of listings.slice(0, 2)) {
+        const refined = await analyzeListing(l);
+        out.push(refined);
+    }
+    await fs.promises.writeFile(OUT_PATH, JSON.stringify(out, null, 2), 'utf-8');
+    return out;
+}
+
+export async function POST(_req: NextRequest) {
+    if (!process.env.OPENAI_API_KEY) {
+        return NextResponse.json(
+            {error: 'OPENAI_API_KEY fehlt'},
+            {status: 500}
+        );
+    }
+    try {
+        const started = Date.now();
+        const data = await refineAll();
+        return NextResponse.json({
+            status: 'ok',
+            count: data.length,
+            durationMs: Date.now() - started,
+            output: 'public/data_refined.json',
+        });
+    } catch (e: any) {
+        return NextResponse.json(
+            {error: e.message || 'Fehler'},
+            {status: 500}
+        );
+    }
+}
+
+export async function GET() {
+    if (fs.existsSync(OUT_PATH)) {
+        const raw = await fs.promises.readFile(OUT_PATH, 'utf-8');
+        return NextResponse.json({ready: true, data: JSON.parse(raw)});
+    }
+    return NextResponse.json({ready: false});
 }

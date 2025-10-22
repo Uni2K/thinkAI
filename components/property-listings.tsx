@@ -113,12 +113,12 @@ export function PropertyListings() {
                 const refinedData = await response.json()
                 console.log('Refined Data:', refinedData)
                 const mappedProperties = mapRefinedDataToProperties(refinedData)
-
+                console.log("Brightness:",brightnessLevel)
                 // Filterlogik
                 const filtered = mappedProperties.filter((property: PropertyListing) => {
                     // Helligkeit (brightnessLevel[0] ist Minimum)
-                    if (brightnessLevel[0] > 0 && property.brightness < brightnessLevel[0]) {
-                        console.log(property.brightness, brightnessLevel[0])
+                    if (brightnessLevel[0] > 0 && parseInt(property.brightnessScore) < brightnessLevel[0]) {
+                        console.log(property.brightnessScore, brightnessLevel[0])
                         return false
                     }
                     // Fassadenfarbe

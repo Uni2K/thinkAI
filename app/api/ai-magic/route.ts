@@ -14,7 +14,7 @@ const CONCURRENCY = 3;
 
 // Modell und API-URL für Azure OpenAI
 const OPENAI_MODEL = "gpt-4o"; // oder z.B. "gpt-4o-mini"
-const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2025-01-01-preview`;
+const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview`;
 
 type Listing = {
     id: string | number;
@@ -75,35 +75,26 @@ Antworte NUR als kompaktes JSON:
 Wenn unsicher: floorType="unknown".
 `;
 
-    const body = {
-        messages: [
-            {
-                role: "system",
-                content: [
-                    {
-                        type: "text",
-                        text: "Du bist ein präzises Vision-Analyse-Modul."
-                    }
-                ]
-            },
-            {
-                role: "user",
-                content: [
-                    {type: "text", text: prompt},
-                    {type: "image_url", image_url: {url: imageUrl}}
-                ]
-            }
-        ],
-        temperature: 0.2,
-        top_p: 0.95,
-        max_tokens: 512,
-        response_format: {type: "json_object"}
-    };
 
     try {
         const res = await axios.post(
             OPENAI_API_URL,
-            body,
+            `{
+  "messages": [
+    {
+      "role": "system",
+      "content": [
+        {
+          "type": "text",
+          "text": "Sie sind KI-Assistent und helfen Personen, Informationen zu finden."
+        }
+      ]
+    }
+  ],
+  "temperature": 0.7,
+  "top_p": 0.95,
+  "max_tokens": 6553
+}`,
             {
                 headers: {
                     "api-key": process.env.OPENAI_API_KEY!,
@@ -134,15 +125,9 @@ Wenn unsicher: floorType="unknown".
             };
         }
     } catch (e: any) {
-        console.error("Axios-Fehler beim Aufruf der OpenAI-API:", e?.message, e?.code, e?.response?.data);
-        return {
-            floorType: 'unknown',
-            brightnessCategory: 'unknown',
-            brightnessScore: 0,
-            confidence: 0,
-            notes: 'Error: ' + (e?.message || 'axios error'),
-        };
     }
+    ;
+
 }
 
 type RawImage = { id: string; originalUrl: string; title?: string };

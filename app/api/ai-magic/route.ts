@@ -14,7 +14,7 @@ const CONCURRENCY = 3;
 
 // Modell und API-URL für Azure OpenAI
 const OPENAI_MODEL = "gpt-4o"; // oder z.B. "gpt-4o-mini"
-const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o/chat/completions?api-version=2025-01-01-preview`;
+const OPENAI_API_URL = `https://customer-growth-hackathon-eh-dwe.openai.azure.com/openai/deployments/gpt-4o-mini/chat/completions?api-version=2025-01-01-preview`;
 
 type Listing = {
     id: string | number;

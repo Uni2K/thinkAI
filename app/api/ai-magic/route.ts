@@ -75,26 +75,35 @@ Antworte NUR als kompaktes JSON:
 Wenn unsicher: floorType="unknown".
 `;
 
+    const body = {
+        messages: [
+            {
+                role: "system",
+                content: [
+                    {
+                        type: "text",
+                        text: "Du bist ein präzises Vision-Analyse-Modul."
+                    }
+                ]
+            },
+            {
+                role: "user",
+                content: [
+                    { type: "text", text: prompt },
+                    { type: "image_url", image_url: { url: imageUrl } }
+                ]
+            }
+        ],
+        temperature: 0.2,
+        top_p: 0.95,
+        max_tokens: 512,
+        response_format: { type: "json_object" }
+    };
 
     try {
         const res = await axios.post(
             OPENAI_API_URL,
-            `{
-  "messages": [
-    {
-      "role": "system",
-      "content": [
-        {
-          "type": "text",
-          "text": "Sie sind KI-Assistent und helfen Personen, Informationen zu finden."
-        }
-      ]
-    }
-  ],
-  "temperature": 0.7,
-  "top_p": 0.95,
-  "max_tokens": 6553
-}`,
+            body,
             {
                 headers: {
                     "api-key": process.env.OPENAI_API_KEY!,
@@ -104,29 +113,57 @@ Wenn unsicher: floorType="unknown".
             }
         );
         const resp = res.data;
-        const raw = resp.choices?.[0]?.message?.content || '{}';
-        try {
-            const parsed = JSON.parse(raw);
+        // Die API liefert bei response_format: {type: "json_object"} das JSON direkt in choices[0].message.content als Objekt
+        const content = resp.choices?.[0]?.message?.content;
+        if (typeof content === "object" && content !== null) {
+            // content ist bereits ein Objekt
             return {
-                floorType: parsed.floorType ?? 'unknown',
-                brightnessCategory: parsed.brightnessCategory ?? 'unknown',
-                brightnessScore: Number(parsed.brightnessScore) || 0,
-                confidence: Number(parsed.confidence) || 0,
-                notes: parsed.notes,
+                floorType: content.floorType ?? 'unknown',
+                brightnessCategory: content.brightnessCategory ?? 'unknown',
+                brightnessScore: Number(content.brightnessScore) || 0,
+                confidence: Number(content.confidence) || 0,
+                notes: content.notes,
             };
-        } catch (e) {
-            console.error("Parse-Fehler:", e, "Antwort:", raw);
+        } else if (typeof content === "string") {
+            // Fallback: content ist ein JSON-String
+            try {
+                const parsed = JSON.parse(content);
+                return {
+                    floorType: parsed.floorType ?? 'unknown',
+                    brightnessCategory: parsed.brightnessCategory ?? 'unknown',
+                    brightnessScore: Number(parsed.brightnessScore) || 0,
+                    confidence: Number(parsed.confidence) || 0,
+                    notes: parsed.notes,
+                };
+            } catch (e) {
+                console.error("Parse-Fehler:", e, "Antwort:", content);
+                return {
+                    floorType: 'unknown',
+                    brightnessCategory: 'unknown',
+                    brightnessScore: 0,
+                    confidence: 0,
+                    notes: 'ParseError',
+                };
+            }
+        } else {
             return {
                 floorType: 'unknown',
                 brightnessCategory: 'unknown',
                 brightnessScore: 0,
                 confidence: 0,
-                notes: 'ParseError',
+                notes: 'NoContent',
             };
         }
     } catch (e: any) {
+        console.error("Axios-Fehler beim Aufruf der OpenAI-API:", e?.message, e?.code, e?.response?.data);
+        return {
+            floorType: 'unknown',
+            brightnessCategory: 'unknown',
+            brightnessScore: 0,
+            confidence: 0,
+            notes: 'Error: ' + (e?.message || 'axios error'),
+        };
     }
-    ;
 
 }
 

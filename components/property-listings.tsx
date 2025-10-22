@@ -89,6 +89,7 @@ const mockProperties = [
 
 export function PropertyListings() {
   const [properties, setProperties] = useState<PropertyListing[]>([])
+  const [failedImages, setFailedImages] = useState<Set<number>>(new Set())
   const [aiQuery, setAiQuery] = useState("")
   const [priceRange, setPriceRange] = useState([0, 1000000])
   const [brightnessLevel, setBrightnessLevel] = useState([50])
@@ -111,12 +112,104 @@ export function PropertyListings() {
       } catch (error) {
         console.error('Error loading properties:', error)
         // Fallback to mock data if loading fails
-        setProperties(mockProperties)
+        // Note: Converting mock data to match PropertyListing interface
+        const fallbackProperties: PropertyListing[] = mockProperties.map((prop, index) => ({
+          ...prop,
+          brightnessScore: prop.brightness === "Sehr hell" ? 85 : prop.brightness === "Hell" ? 65 : 45,
+          floorType: "unknown",
+          bathroomTiles: prop.bathroomTiles || "unknown"
+        }))
+        setProperties(fallbackProperties)
       }
     }
     
     loadProperties()
   }, [])
+
+  const handleImageError = (propertyId: number) => {
+    setFailedImages(prev => new Set(prev).add(propertyId))
+  }
+
+  const HousePlaceholder = () => (
+    <div className="w-full h-full bg-gradient-to-b from-blue-100 to-green-100 flex items-center justify-center">
+      <svg width="200" height="150" viewBox="0 0 200 150" fill="none" xmlns="http://www.w3.org/2000/svg">
+        {/* Sun */}
+        <circle cx="170" cy="25" r="12" fill="#FCD34D" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="170" y1="8" x2="170" y2="12" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="185" y1="25" x2="181" y2="25" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="170" y1="42" x2="170" y2="38" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="155" y1="25" x2="159" y2="25" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="180" y1="14" x2="178" y2="16" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="182" y1="34" x2="180" y2="36" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="160" y1="36" x2="162" y2="34" stroke="#F59E0B" strokeWidth="2"/>
+        <line x1="162" y1="16" x2="160" y2="14" stroke="#F59E0B" strokeWidth="2"/>
+        
+        {/* Clouds */}
+        <ellipse cx="40" cy="20" rx="8" ry="5" fill="#E5E7EB"/>
+        <ellipse cx="45" cy="18" rx="6" ry="4" fill="#E5E7EB"/>
+        <ellipse cx="50" cy="20" rx="7" ry="5" fill="#E5E7EB"/>
+        
+        {/* Main house roof */}
+        <polygon points="100,30 160,65 40,65" fill="#DC2626" stroke="#991B1B" strokeWidth="2"/>
+        
+        {/* Chimney */}
+        <rect x="125" y="20" width="8" height="25" fill="#7C2D12" stroke="#451A03" strokeWidth="1"/>
+        <rect x="123" y="18" width="12" height="4" fill="#991B1B"/>
+        
+        {/* Smoke */}
+        <circle cx="129" cy="15" r="2" fill="#9CA3AF" opacity="0.7"/>
+        <circle cx="132" cy="12" r="1.5" fill="#9CA3AF" opacity="0.5"/>
+        <circle cx="127" cy="10" r="1" fill="#9CA3AF" opacity="0.3"/>
+        
+        {/* House body */}
+        <rect x="50" y="65" width="100" height="60" fill="#FEF3C7" stroke="#D97706" strokeWidth="2"/>
+        
+        {/* Door */}
+        <rect x="70" y="85" width="25" height="40" fill="#92400E" stroke="#451A03" strokeWidth="2"/>
+        <rect x="72" y="87" width="21" height="18" fill="#DBEAFE" rx="2"/>
+        <circle cx="88" cy="105" r="2" fill="#374151"/>
+        
+        {/* Door steps */}
+        <rect x="68" y="123" width="29" height="3" fill="#6B7280"/>
+        <rect x="66" y="126" width="33" height="2" fill="#4B5563"/>
+        
+        {/* Windows */}
+        <rect x="105" y="75" width="20" height="20" fill="#1E40AF" stroke="#1E3A8A" strokeWidth="2"/>
+        <rect x="107" y="77" width="16" height="16" fill="#DBEAFE"/>
+        <line x1="115" y1="77" x2="115" y2="93" stroke="#1E3A8A" strokeWidth="1"/>
+        <line x1="107" y1="85" x2="123" y2="85" stroke="#1E3A8A" strokeWidth="1"/>
+        
+        <rect x="130" y="75" width="15" height="15" fill="#1E40AF" stroke="#1E3A8A" strokeWidth="2"/>
+        <rect x="132" y="77" width="11" height="11" fill="#DBEAFE"/>
+        <line x1="137.5" y1="77" x2="137.5" y2="88" stroke="#1E3A8A" strokeWidth="1"/>
+        <line x1="132" y1="82.5" x2="143" y2="82.5" stroke="#1E3A8A" strokeWidth="1"/>
+        
+        {/* Flower boxes */}
+        <rect x="103" y="95" width="24" height="4" fill="#059669"/>
+        <circle cx="107" cy="93" r="2" fill="#EF4444"/>
+        <circle cx="115" cy="92" r="2" fill="#F59E0B"/>
+        <circle cx="123" cy="93" r="2" fill="#EF4444"/>
+        
+        <rect x="128" y="90" width="19" height="3" fill="#059669"/>
+        <circle cx="132" cy="88" r="1.5" fill="#8B5CF6"/>
+        <circle cx="140" cy="87" r="1.5" fill="#EC4899"/>
+        <circle cx="144" cy="88" r="1.5" fill="#8B5CF6"/>
+        
+        {/* Grass */}
+        <rect x="0" y="125" width="200" height="25" fill="#10B981"/>
+        <rect x="0" y="120" width="200" height="8" fill="#059669"/>
+        
+        {/* Cute face on house */}
+        <circle cx="85" cy="105" r="1.5" fill="#374151"/>
+        <circle cx="90" cy="105" r="1.5" fill="#374151"/>
+        <path d="M 82 110 Q 87.5 115 93 110" stroke="#374151" strokeWidth="1.5" fill="none"/>
+        
+        <text x="100" y="145" textAnchor="middle" fill="#374151" fontSize="12" fontFamily="Arial, sans-serif" fontWeight="bold">
+          🏠 Kein Bild verfügbar! 😅
+        </text>
+      </svg>
+    </div>
+  )
 
   const colors = [
     { name: "Weiß", value: "weiß", hex: "#FFFFFF", border: true },
@@ -690,11 +783,16 @@ export function PropertyListings() {
           {properties.map((property) => (
             <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow group">
               <div className="relative aspect-[4/3] overflow-hidden">
-                <img
-                  src={property.image }
-                  alt={property.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
+                {failedImages.has(property.id) || !property.image.startsWith('http') ? (
+                  <HousePlaceholder />
+                ) : (
+                  <img
+                    src={property.image}
+                    alt={property.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    onError={() => handleImageError(property.id)}
+                  />
+                )}
                 <div className="absolute top-3 right-3 flex gap-2">
                   <Button size="icon" variant="secondary" className="rounded-full bg-white/90 hover:bg-white">
                     <Heart className="w-4 h-4" />

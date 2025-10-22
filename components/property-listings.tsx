@@ -153,7 +153,7 @@ export function PropertyListings() {
   return (
     <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="border-b border-border bg-card/50 backdrop-blur-sm sticky top-0 z-50">
+      <header className="bg-card/50 backdrop-blur-sm sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <Link href="/" className="flex items-center gap-2">
@@ -179,10 +179,10 @@ export function PropertyListings() {
       </header>
 
       {/* AI Search Section */}
-      <section className="border-b border-border bg-gradient-to-b from-muted/30 to-background">
+      <section className=" bg-gradient-to-b from-muted/30 to-background mt-40">
         <div className="container mx-auto px-4 py-12">
           <div className="max-w-4xl mx-auto space-y-6">
-            <div className="text-center space-y-4">
+            <div className="text-center space-y-8">
               <div className="flex items-center justify-center gap-3">
                 <div className="w-12 h-12 rounded-xl ai-gradient flex items-center justify-center">
                   <Sparkles className="w-7 h-7 text-white" />
@@ -209,7 +209,7 @@ export function PropertyListings() {
                     onChange={(e) => setAiQuery(e.target.value)}
                     className="border-0 bg-transparent text-base h-12 focus-visible:ring-0 focus-visible:ring-offset-0"
                   />
-                  <Button size="lg" className="ai-gradient text-white flex-shrink-0">
+                  <Button size="lg" className="ai-gradient text-white flex-shrink-0 cursor-pointer">
                     <Search className="w-5 h-5 mr-2" />
                     Suchen
                   </Button>
@@ -225,7 +225,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <Sun className="w-4 h-4 text-amber-500" />
                       Lichtverhältnisse
@@ -251,7 +251,7 @@ export function PropertyListings() {
                           className="w-full"
                         />
                         <div className="flex justify-between text-xs text-muted-foreground pt-1">
-                          <span>Hell</span>
+                          <span>Sehr dunkel</span>
                           <span>Sehr hell durchflutet</span>
                         </div>
                       </div>
@@ -264,7 +264,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <Home className="w-4 h-4 text-blue-500" />
                       Farbe der Fassade
@@ -316,7 +316,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <UtensilsCrossed className="w-4 h-4 text-orange-500" />
                       Küchenfarbe
@@ -368,7 +368,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <Droplets className="w-4 h-4 text-cyan-500" />
                       Badfarbe
@@ -420,7 +420,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <Layers className="w-4 h-4 text-emerald-500" />
                       Bodenbelag
@@ -460,7 +460,7 @@ export function PropertyListings() {
                   <PopoverTrigger asChild>
                     <Button
                       variant="outline"
-                      className="gap-2 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
+                      className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                     >
                       <Flame className="w-4 h-4 text-red-500" />
                       Sauna
@@ -504,183 +504,13 @@ export function PropertyListings() {
         </div>
       </section>
 
-      {/* Filters and Results */}
-      <section className="container mx-auto px-4 py-8">
+      {/* Results */}
+      <section className="container mx-auto px-4 py-8border-t border-border">
         <div className="flex items-center justify-between mb-6">
           <div>
             <h3 className="text-2xl font-bold">Verfügbare Immobilien</h3>
             <p className="text-muted-foreground">{properties.length} Ergebnisse gefunden</p>
           </div>
-
-          {/* Filter Sheet */}
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="outline" size="lg">
-                <SlidersHorizontal className="w-5 h-5 mr-2" />
-                Erweiterte Filter
-              </Button>
-            </SheetTrigger>
-            <SheetContent className="w-full sm:max-w-md overflow-y-auto">
-              <SheetHeader>
-                <SheetTitle>Erweiterte Filter</SheetTitle>
-                <SheetDescription>Nutze unsere visuellen Filter für eine präzisere Suche</SheetDescription>
-              </SheetHeader>
-
-              <div className="space-y-6 mt-6">
-                {/* Price Range */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium">Preisspanne</label>
-                  <Slider
-                    value={priceRange}
-                    onValueChange={setPriceRange}
-                    max={1000000}
-                    step={10000}
-                    className="w-full"
-                  />
-                  <div className="flex justify-between text-sm text-muted-foreground">
-                    <span>{priceRange[0].toLocaleString("de-DE")} €</span>
-                    <span>{priceRange[1].toLocaleString("de-DE")} €</span>
-                  </div>
-                </div>
-
-                {/* Brightness Filter */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <Sun className="w-4 h-4 text-primary" />
-                    Lichtverhältnisse der Immobilie
-                  </label>
-                  <Select
-                    value={brightnessLevel[0].toString()}
-                    onValueChange={(value) => setBrightnessLevel([Number.parseInt(value)])}
-                  >
-                    <SelectTrigger>
-                      <SelectValue placeholder="Helligkeit wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="50">Mittel</SelectItem>
-                      <SelectItem value="100">Sehr hell</SelectItem>
-                      <SelectItem value="0">Dunkel</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Exterior Color */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <Home className="w-4 h-4 text-primary" />
-                    Farbe der Außenfassade
-                  </label>
-                  <Select value={selectedExteriorColor} onValueChange={setSelectedExteriorColor}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Farbe wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="weiß">Weiß</SelectItem>
-                      <SelectItem value="beige">Beige</SelectItem>
-                      <SelectItem value="grau">Grau</SelectItem>
-                      <SelectItem value="schwarz">Schwarz</SelectItem>
-                      <SelectItem value="blau">Blau</SelectItem>
-                      <SelectItem value="rot">Rot</SelectItem>
-                      <SelectItem value="gelb">Gelb</SelectItem>
-                      <SelectItem value="grün">Grün</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Kitchen Color */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <UtensilsCrossed className="w-4 h-4 text-primary" />
-                    Küchenfarbe
-                  </label>
-                  <Select value={selectedKitchenColor} onValueChange={setSelectedKitchenColor}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Farbe wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="weiß">Weiß</SelectItem>
-                      <SelectItem value="beige">Beige</SelectItem>
-                      <SelectItem value="grau">Grau</SelectItem>
-                      <SelectItem value="schwarz">Schwarz</SelectItem>
-                      <SelectItem value="blau">Blau</SelectItem>
-                      <SelectItem value="rot">Rot</SelectItem>
-                      <SelectItem value="gelb">Gelb</SelectItem>
-                      <SelectItem value="grün">Grün</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Bathroom Tiles */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <Droplets className="w-4 h-4 text-primary" />
-                    Badfarbe
-                  </label>
-                  <Select value={selectedBathroomColor} onValueChange={setSelectedBathroomColor}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Farbe wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="weiß">Weiß</SelectItem>
-                      <SelectItem value="beige">Beige</SelectItem>
-                      <SelectItem value="grau">Grau</SelectItem>
-                      <SelectItem value="schwarz">Schwarz</SelectItem>
-                      <SelectItem value="blau">Blau</SelectItem>
-                      <SelectItem value="rot">Rot</SelectItem>
-                      <SelectItem value="gelb">Gelb</SelectItem>
-                      <SelectItem value="grün">Grün</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Floor Material */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <Layers className="w-4 h-4 text-primary" />
-                    Bodenbelag
-                  </label>
-                  <Select value={selectedFloorMaterial} onValueChange={setSelectedFloorMaterial}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Material wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Parkett">Parkett</SelectItem>
-                      <SelectItem value="Laminat">Laminat</SelectItem>
-                      <SelectItem value="Fliesen">Fliesen</SelectItem>
-                      <SelectItem value="Holzdielen">Holzdielen</SelectItem>
-                      <SelectItem value="Vinyl">Vinyl</SelectItem>
-                      <SelectItem value="Teppich">Teppich</SelectItem>
-                      <SelectItem value="Naturstein">Naturstein</SelectItem>
-                      <SelectItem value="Beton">Beton</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                {/* Sauna Type */}
-                <div className="space-y-3">
-                  <label className="text-sm font-medium flex items-center gap-2">
-                    <Flame className="w-4 h-4 text-primary" />
-                    Sauna
-                  </label>
-                  <Select value={selectedSaunaType} onValueChange={setSelectedSaunaType}>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Sauna-Art wählen" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="Finnische Sauna">Finnische Sauna</SelectItem>
-                      <SelectItem value="Bio-Sauna">Bio-Sauna</SelectItem>
-                      <SelectItem value="Infrarot-Sauna">Infrarot-Sauna</SelectItem>
-                      <SelectItem value="Dampfsauna">Dampfsauna</SelectItem>
-                      <SelectItem value="Sanarium">Sanarium</SelectItem>
-                      <SelectItem value="Textilsauna">Textilsauna</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
-
-                <Button className="w-full ai-gradient text-white">Filter anwenden</Button>
-              </div>
-            </SheetContent>
-          </Sheet>
         </div>
 
         {/* Property Grid */}

@@ -243,10 +243,7 @@ export function PropertyListings() {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex items-center justify-between">
                         <Link href="/" className="flex items-center gap-2">
-                            <div className="w-8 h-8 rounded-lg ai-gradient flex items-center justify-center">
-                                <Sparkles className="w-5 h-5 text-white"/>
-                            </div>
-                            <h1 className="text-2xl font-bold">ThinkAI</h1>
+                            <img width={40} src={"logo-small.png"}></img>
                         </Link>
                         <nav className="flex items-center gap-4">
                             <Link href="/">
@@ -270,10 +267,7 @@ export function PropertyListings() {
                     <div className="max-w-4xl mx-auto space-y-6">
                         <div className="text-center space-y-8">
                             <div className="flex items-center justify-center gap-3">
-                                <div className="w-12 h-12 rounded-xl ai-gradient flex items-center justify-center">
-                                    <Sparkles className="w-7 h-7 text-white"/>
-                                </div>
-                                <h1 className="text-5xl font-bold">ThinkAI</h1>
+                                <img height={200} width={400} src={"/logo-large.png"}></img>
                             </div>
                             <p className="text-lg text-muted-foreground text-pretty max-w-3xl mx-auto">
                                 Finde deine Traumimmobilie mit ThinkAI - Beschreibe einfach, was du suchst - unsere KI
@@ -285,7 +279,7 @@ export function PropertyListings() {
                         {/* AI Search Input */}
                         <div className="relative">
                             <div className="absolute inset-0 ai-gradient opacity-20 blur-xl rounded-2xl"/>
-                            <div className="relative bg-card border-2 border-primary/20 rounded-2xl p-2 ai-glow">
+                            <div className="relative bg-card border-0 border-primary/20 rounded-2xl p-2 ai-glow">
                                 <div className="flex items-center gap-3">
                                     <div
                                         className="flex items-center justify-center w-10 h-10 rounded-lg ai-gradient flex-shrink-0">

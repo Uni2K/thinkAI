@@ -1,0 +1,495 @@
+[
+  {
+    "id": "4221df028891ce69acff53c58737e25a",
+    "title": "Gemütliche Dachgeschosswohnung mit Loggia im Stadtteil Jürgensby",
+    "zip": "24943",
+    "buyingPrice": 165000,
+    "rooms": 2,
+    "squareMeter": 51.6,
+    "comission": 3.57,
+    "platforms": [
+      {
+        "deactivationDate": "2025-06-26T07:06:00.313Z",
+        "name": "is24",
+        "publishDate": "2025-05-30T05:29:34.000Z",
+        "active": false,
+        "id": "159499593",
+        "creationDate": "2025-05-30T05:29:34.000Z",
+        "url": "https://www.immobilienscout24.de/expose/159499593"
+      }
+    ],
+    "rentPricePerSqm": 10.116279069767442,
+    "metaSpRentPricePerSqm": {
+      "model": "07, 2025",
+      "standarderror": 0.15592,
+      "score": 1.94,
+      "range": {
+        "min": 8.74031007751938,
+        "max": 11.976744186046512
+      }
+    },
+    "pricePerSqm": 3197.6744186046512,
+    "spPricePerSqm": 2306.201550387597,
+    "metaSpPricePerSqm": {
+      "model": "07, 2025",
+      "standarderror": 0.22401,
+      "score": 2.55,
+      "range": {
+        "min": 1879.84496124031,
+        "max": 2965.116279069767
+      }
+    },
+    "rentPrice": 522,
+    "rentPriceCurrent": null,
+    "rentPriceCurrentPerSqm": null,
+    "address": {
+      "ISO_3166-1_alpha-2": "DE",
+      "ISO_3166-1_alpha-3": "DEU",
+      "ISO_3166-2": [
+        "DE-SH"
+      ],
+      "_category": "place",
+      "_normalized_city": "Flensburg",
+      "_type": "neighbourhood",
+      "city_district": "Jürgensby",
+      "continent": "Europe",
+      "country": "Deutschland",
+      "country_code": "de",
+      "political_union": "European Union",
+      "state": "Schleswig-Holstein",
+      "state_code": "SH",
+      "suburb": "Jürgensgaard",
+      "town": "Flensburg",
+      "lat": 54.7878098,
+      "lon": 9.4463071,
+      "displayName": "Jürgensgaard, Flensburg, Schleswig-Holstein, Deutschland",
+      "postcode": "24943"
+    },
+    "energyEfficiencyClass": "C",
+    "region": "Schleswig-Holstein",
+    "foreClosure": false,
+    "locationFactor": {
+      "populationTrend": {
+        "from": -5,
+        "to": 5
+      },
+      "populationScore": 25,
+      "hasUniversity": true,
+      "numberOfStudents": 9899,
+      "universityScore": 25,
+      "population": 92550,
+      "unemploymentRate": 8.7,
+      "score": 67,
+      "populationTrendScore": 16.664,
+      "unemploymentRateScore": 0
+    },
+    "grossReturn": 3.8,
+    "grossReturnCurrent": null,
+    "constructionYear": 1971,
+    "apartmentType": "APARTMENT",
+    "condition": "WELL_KEPT",
+    "lastRefurbishment": 2022,
+    "lift": false,
+    "floor": 2,
+    "numberOfFloors": 2,
+    "cellar": false,
+    "balcony": true,
+    "garden": false,
+    "active": true,
+    "rented": false,
+    "publishDate": "2025-10-22T08:10:44.065Z",
+    "privateOffer": false,
+    "aggregations": {
+      "district": {
+        "buyingPrice": 136740,
+        "name": "Tarup",
+        "pricePerSqm": 2650,
+        "grossReturn": 3.7132075471698114
+      },
+      "similarListing": {
+        "buyingPrice": 119000,
+        "name": null,
+        "pricePerSqm": 2306.201550387597,
+        "grossReturn": 5.263865546218487
+      },
+      "location": {
+        "buyingPrice": 136740,
+        "name": "Flensburg",
+        "pricePerSqm": 2650,
+        "grossReturn": 3.7132075471698114
+      }
+    },
+    "leasehold": false,
+    "priceInMarket": 138.65546218487395,
+    "oAddress": {
+      "is24": {
+        "street": null,
+        "postcode": "24943",
+        "location": "Flensburg",
+        "district": "Jürgensgaard"
+      }
+    },
+    "originalAddress": {
+      "postcode": "24943",
+      "location": "Flensburg",
+      "district": "Jürgensgaard"
+    },
+    "houseMoney": 218,
+    "images": [
+      "https://pictures.immobilienscout24.de/listings/26b34d99-7eac-4f1d-a6f7-deee141ccdce-1908164265.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/d873e661-80bf-479f-befd-0e15ec67f847-1908164269.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/f1287471-c315-4b1a-b336-c1102784de15-1908164271.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/0ac09730-2289-4f25-8d51-c101895fd498-1908164274.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/2f7df2be-064e-48ea-ad2c-704cc38858f4-1908164275.jpg/ORIG/resize/1024x1024/format/jpg"
+    ],
+    "buyingPriceHistory": [
+      {
+        "buyingPrice": 165000,
+        "platformName": "immowelt",
+        "creationDate": "2025-08-31T19:27:57.149Z"
+      },
+      {
+        "buyingPrice": 179000,
+        "platformName": "immowelt",
+        "creationDate": "2025-05-30T05:33:44.761Z"
+      },
+      {
+        "buyingPrice": 179000,
+        "platformName": "is24",
+        "creationDate": "2025-05-30T05:29:34.000Z"
+      },
+      {
+        "buyingPrice": 159000,
+        "platformName": "ebk",
+        "creationDate": "2025-10-22T07:45:44.969Z"
+      }
+    ],
+    "priceReduced": false,
+    "priceIncreased": false,
+    "runningTime": 0,
+    "lastUpdatedAt": "2025-10-22T08:10:44.066Z",
+    "favorite": 0,
+    "favoriteDate": null,
+    "cashFlow": 522,
+    "ownCapitalReturn": null,
+    "cashFlowPerLivingUnit": 522,
+    "hasImages": true,
+    "_rawImages": [
+      {
+        "id": "0aaf023a43421d685df06f093ce237f4",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/26b34d99-7eac-4f1d-a6f7-deee141ccdce-1908164265.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "63beb953-c458-4c0c-a74e-abab0c"
+      },
+      {
+        "id": "493fb848f9d8012da1832b59351d4d49",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/d873e661-80bf-479f-befd-0e15ec67f847-1908164269.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "c0049a0f-b095-490f-be14-981cee"
+      },
+      {
+        "id": "2861fa013bbbe5f5c497ddb71091783a",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/f1287471-c315-4b1a-b336-c1102784de15-1908164271.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "HausansichtFrontStraße"
+      },
+      {
+        "id": "43733cee30f5b7fd96ac58f627341bed",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/0ac09730-2289-4f25-8d51-c101895fd498-1908164274.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Wohn-Esszimmer"
+      },
+      {
+        "id": "cdd0c6138a75f6e5fbf53e1700c7d5b7",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/2f7df2be-064e-48ea-ad2c-704cc38858f4-1908164275.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "WohnEssbereich"
+      }
+    ],
+    "ai": {
+      "dominantFloor": "unknown",
+      "avgBrightness": 0,
+      "perImage": [
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        }
+      ],
+      "analyzedAt": "2025-10-22T12:20:34.356Z"
+    }
+  },
+  {
+    "id": "fb4c76e7c2d04f2ea4dcc569ac130941",
+    "title": "Friedenau: sanierte 3-Zi-Altbau-Wohnung mit Wintergarten",
+    "zip": "12159",
+    "buyingPrice": 650000,
+    "rooms": 3,
+    "squareMeter": 103.9,
+    "comission": 3.57,
+    "platforms": [
+      {
+        "deactivationDate": "2025-05-07T17:27:24.193Z",
+        "name": "is24",
+        "publishDate": "2025-04-11T07:36:23.000Z",
+        "active": false,
+        "id": "158499960",
+        "creationDate": "2025-04-11T07:36:23.000Z",
+        "url": "https://www.immobilienscout24.de/expose/158499960"
+      }
+    ],
+    "rentPricePerSqm": 17.0837343599615,
+    "metaSpRentPricePerSqm": {
+      "model": "06, 2025",
+      "standarderror": 0.25748,
+      "score": 2.84,
+      "range": {
+        "min": 13.580365736284888,
+        "max": 23.00288739172281
+      }
+    },
+    "pricePerSqm": 6256.015399422521,
+    "spPricePerSqm": 5591.915303176131,
+    "metaSpPricePerSqm": {
+      "model": "06, 2025",
+      "standarderror": 0.22653,
+      "score": 2.57,
+      "range": {
+        "min": 4562.078922040423,
+        "max": 7237.728585178055
+      }
+    },
+    "rentPrice": 1775,
+    "rentPriceCurrent": null,
+    "rentPriceCurrentPerSqm": null,
+    "address": {
+      "ISO_3166-1_alpha-2": "DE",
+      "ISO_3166-1_alpha-3": "DEU",
+      "ISO_3166-2": [
+        "DE-BE"
+      ],
+      "_category": "building",
+      "_normalized_city": "Berlin",
+      "_type": "building",
+      "borough": "Tempelhof-Schöneberg",
+      "city": "Berlin",
+      "continent": "Europe",
+      "country": "Deutschland",
+      "country_code": "de",
+      "house_number": "62",
+      "political_union": "European Union",
+      "postcode": "12159",
+      "road": "Fregestraße",
+      "state": "Berlin",
+      "state_code": "BE",
+      "suburb": "Schöneberg",
+      "lat": 52.4686231,
+      "lon": 13.3375455,
+      "displayName": "Fregestraße 62, 12159 Berlin, Deutschland"
+    },
+    "energyEfficiencyClass": "E",
+    "region": "Berlin",
+    "foreClosure": false,
+    "locationFactor": {
+      "unemploymentRate": 0,
+      "score": 67,
+      "populationTrendScore": 16.664,
+      "populationTrend": {
+        "from": -5,
+        "to": 5
+      },
+      "populationScore": 25,
+      "hasUniversity": true,
+      "numberOfStudents": 185123,
+      "unemploymentRateScore": 0,
+      "universityScore": 25,
+      "population": 3755251
+    },
+    "grossReturn": 3.28,
+    "grossReturnCurrent": null,
+    "constructionYear": 1889,
+    "apartmentType": "APARTMENT",
+    "condition": "FULLY_RENOVATED",
+    "lastRefurbishment": 2022,
+    "lift": false,
+    "floor": 2,
+    "numberOfFloors": 4,
+    "cellar": true,
+    "balcony": false,
+    "garden": false,
+    "active": true,
+    "rented": false,
+    "publishDate": "2025-10-22T07:38:13.987Z",
+    "privateOffer": false,
+    "aggregations": {
+      "district": {
+        "buyingPrice": 394820,
+        "name": "Schöneberg",
+        "pricePerSqm": 3800,
+        "grossReturn": 3.56842105263158
+      },
+      "similarListing": {
+        "buyingPrice": 581000,
+        "name": null,
+        "pricePerSqm": 5591.915303176131,
+        "grossReturn": 3.6660929432013774
+      },
+      "location": {
+        "buyingPrice": 503915,
+        "name": "Berlin",
+        "pricePerSqm": 4850,
+        "grossReturn": 3.0927835051546393
+      }
+    },
+    "leasehold": false,
+    "priceInMarket": 111.87607573149741,
+    "oAddress": {
+      "is24": {
+        "street": "Fregestraße 62",
+        "postcode": "12159",
+        "location": "Berlin",
+        "district": "Schöneberg"
+      }
+    },
+    "originalAddress": {
+      "street": "Fregestraße 62",
+      "postcode": "12159",
+      "location": "Berlin",
+      "district": "Schöneberg"
+    },
+    "houseMoney": 282.05,
+    "images": [
+      "https://pictures.immobilienscout24.de/listings/e5335d0f-d02d-44f1-8058-6fccbddf30e6-1895065992.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/da3397ae-4041-4332-8ef7-c5d8017289f7-1895065995.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/5e20d7c3-024b-47f3-b436-a5262ee69525-1895065999.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/c78b0def-5ca3-4789-90f7-7e1889a85c92-1895066005.jpg/ORIG/resize/1024x1024/format/jpg",
+      "https://pictures.immobilienscout24.de/listings/d9d51f54-dedf-4148-9e63-9448a4ab26a6-1895066007.jpg/ORIG/resize/1024x1024/format/jpg"
+    ],
+    "buyingPriceHistory": [
+      {
+        "buyingPrice": 686000,
+        "platformName": "immonet",
+        "creationDate": "2025-04-11T09:53:14.511Z"
+      },
+      {
+        "buyingPrice": 686000,
+        "platformName": "ebk",
+        "creationDate": "2025-04-11T07:43:19.009Z"
+      },
+      {
+        "buyingPrice": 686000,
+        "platformName": "is24",
+        "creationDate": "2025-04-11T07:36:23.000Z"
+      },
+      {
+        "buyingPrice": 650000,
+        "platformName": "immonet",
+        "creationDate": "2025-06-23T16:41:51.666Z"
+      }
+    ],
+    "priceReduced": true,
+    "priceIncreased": false,
+    "runningTime": 0,
+    "lastUpdatedAt": "2025-10-22T08:01:08.905Z",
+    "favorite": 0,
+    "favoriteDate": null,
+    "cashFlow": 1775,
+    "ownCapitalReturn": null,
+    "cashFlowPerLivingUnit": 1775,
+    "hasImages": true,
+    "_rawImages": [
+      {
+        "id": "35ce267d03e9c783bbba225350c58a4b",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/e5335d0f-d02d-44f1-8058-6fccbddf30e6-1895065992.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Zwei Zimmer zur Straße"
+      },
+      {
+        "id": "8f6877c4e4a7ae8b845763b9ed3849c1",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/da3397ae-4041-4332-8ef7-c5d8017289f7-1895065995.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Erkerzimmer Wohnzimmer"
+      },
+      {
+        "id": "7e24f7ef5303f168bb94687edfd91bdf",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/5e20d7c3-024b-47f3-b436-a5262ee69525-1895065999.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Eines der Schlafzimmer"
+      },
+      {
+        "id": "cc8613e97bca4e2e86ca69580261199b",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/c78b0def-5ca3-4789-90f7-7e1889a85c92-1895066005.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Schlafzimmer zum Innenhof"
+      },
+      {
+        "id": "34916dd857a8ab04cb8f3bcdc1f7467c",
+        "originalUrl": "https://pictures.immobilienscout24.de/listings/d9d51f54-dedf-4148-9e63-9448a4ab26a6-1895066007.jpg/ORIG/resize/1024x1024/format/jpg",
+        "title": "Tageslichtbad mit Wanne"
+      }
+    ],
+    "ai": {
+      "dominantFloor": "unknown",
+      "avgBrightness": 0,
+      "perImage": [
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        },
+        {
+          "floorType": "unknown",
+          "brightnessCategory": "unknown",
+          "brightnessScore": 0,
+          "confidence": 0,
+          "notes": "Error: Request failed with status code 429"
+        }
+      ],
+      "analyzedAt": "2025-10-22T12:20:34.987Z"
+    }
+  }
+]

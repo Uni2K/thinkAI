@@ -105,9 +105,7 @@ export function PropertyListings() {
       try {
         const response = await fetch('/data_refined.json')
         const refinedData = await response.json()
-        console.log('Refined Data:', refinedData  )
         const mappedProperties = mapRefinedDataToProperties(refinedData)
-        console.log('Mapped Properties:', mappedProperties)
         setProperties(mappedProperties)
       } catch (error) {
         console.error('Error loading properties:', error)

@@ -1,7 +1,6 @@
 "use client"
 
-import {Select, SelectTrigger, SelectValue, SelectContent, SelectItem} from "@/components/ui/select"
-import {useState, useEffect, useRef} from "react"
+import {useState, useEffect, useRef, useMemo} from "react"
 import Link from "next/link"
 import {
     Search,
@@ -17,95 +16,78 @@ import {
     UtensilsCrossed,
     Droplets,
     Layers,
-    Flame,
+    Wind, Waves, ShowerHead, Bath, Thermometer
 } from "lucide-react"
 import {Button} from "@/components/ui/button"
 import {Input} from "@/components/ui/input"
 import {Badge} from "@/components/ui/badge"
 import {Card, CardContent} from "@/components/ui/card"
 import {Slider} from "@/components/ui/slider"
-import {Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger} from "@/components/ui/sheet"
 import {Popover, PopoverContent, PopoverTrigger} from "@/components/ui/popover"
 import {mapRefinedDataToProperties, type PropertyListing} from "@/lib/data-mapper"
+import {Checkbox} from "@radix-ui/react-checkbox";
+import {Separator} from "@radix-ui/react-dropdown-menu";
 
-const mockProperties = [
-    {
-        id: 1,
-        image: "/modern-bright-apartment-with-white-kitchen.jpg",
-        title: "Moderne Wohnung in München",
-        location: "München, Bayern",
-        price: 450000,
-        size: 85,
-        rooms: 3,
-        brightness: "Sehr hell",
-        exteriorColor: "Weiß",
-        kitchenColor: "Weiß",
-        bathroomTiles: "Grau",
-        saunaType: "finnisch",
-    },
-    {
-        id: 2,
-        image: "/cozy-apartment-with-wooden-kitchen.jpg",
-        title: "Gemütliche Altbauwohnung",
-        location: "Berlin, Prenzlauer Berg",
-        price: 380000,
-        size: 72,
-        rooms: 2,
-        brightness: "Hell",
-        exteriorColor: "Beige",
-        kitchenColor: "Holz",
-        bathroomTiles: "Weiß",
-        saunaType: "bio",
-    },
-    {
-        id: 3,
-        image: "/luxury-penthouse-with-black-kitchen.jpg",
-        title: "Penthouse mit Dachterrasse",
-        location: "Hamburg, HafenCity",
-        price: 890000,
-        size: 120,
-        rooms: 4,
-        brightness: "Sehr hell",
-        exteriorColor: "Grau",
-        kitchenColor: "Schwarz",
-        bathroomTiles: "Schwarz",
-        saunaType: "infrarot",
-    },
-    {
-        id: 4,
-        image: "/family-house-with-blue-exterior.jpg",
-        title: "Einfamilienhaus mit Garten",
-        location: "Frankfurt, Sachsenhausen",
-        price: 650000,
-        size: 145,
-        rooms: 5,
-        brightness: "Hell",
-        exteriorColor: "Blau",
-        kitchenColor: "Weiß",
-        bathroomTiles: "Beige",
-        saunaType: "dampf",
-    },
+
+const BATH_FEATURES = [
+    {label: "Fenster", icon: Wind},
+    {label: "Tageslicht", icon: Sun},
+    {label: "Badewanne", icon: Waves},
+    {label: "Dusche", icon: Droplets},
+    {label: "Ebenerdige Dusche", icon: ShowerHead},
+    {label: "Doppelwaschbecken", icon: Bath},
+    {label: "Handtuchheizung", icon: Thermometer},
+    {label: "Gäste-WC", icon: Bath},
 ]
+
 
 export function PropertyListings() {
     const [properties, setProperties] = useState<PropertyListing[]>([])
     const [failedImages, setFailedImages] = useState<Set<number>>(new Set())
     const [aiQuery, setAiQuery] = useState("")
-    const [priceRange, setPriceRange] = useState([0, 1000000])
     const [brightnessLevel, setBrightnessLevel] = useState([50])
     const [selectedExteriorColor, setSelectedExteriorColor] = useState<string>("")
     const [selectedKitchenColor, setSelectedKitchenColor] = useState<string>("")
     const [selectedBathroomColor, setSelectedBathroomColor] = useState<string>("")
     const [selectedFloorMaterial, setSelectedFloorMaterial] = useState<string>("")
-    const [selectedSaunaType, setSelectedSaunaType] = useState<string>("")
     const [searchStarted, setSearchStarted] = useState(false)
 
+    const [bathFeatures, setBathFeatures] = useState<string>("")
+
+
+    const toggleFeature = (feature: string) => {
+        if (bathFeatures === feature) {
+            setBathFeatures("")
+        } else {
+            setBathFeatures(feature)
+        }
+    }
 
     const searchSectionRef = useRef<HTMLDivElement>(null)
-    const handleSearch = () => {
-        searchSectionRef.current?.scrollIntoView({behavior: "smooth", block: "center"})
-        setSearchStarted(true)
-    }
+    const handleSearch = async () => {
+        try {
+            const res = await fetch('/api/filter', {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({aiQuery}),
+            });
+
+            const filters = await res.json();
+
+
+            setSelectedExteriorColor(filters.facadeColor || "");
+            setSelectedKitchenColor(filters.kitchenColor || "");
+            setSelectedBathroomColor(filters.bathroomColor || "");
+            setSelectedFloorMaterial(filters.floorType || "");
+            setBrightnessLevel([filters.brightnessScore || 50]);
+            setBathFeatures(filters.bathFeature || "");
+
+            searchSectionRef.current?.scrollIntoView({behavior: "smooth", block: "start"})
+            setSearchStarted(true)
+        } catch (err) {
+            console.error('Fehler beim Abrufen der Filter:', err);
+        }
+    };
     useEffect(() => {
         const loadProperties = async () => {
             try {
@@ -113,11 +95,8 @@ export function PropertyListings() {
                 const refinedData = await response.json()
                 console.log('Refined Data:', refinedData)
                 const mappedProperties = mapRefinedDataToProperties(refinedData)
-                console.log("Brightness:",brightnessLevel)
-                // Filterlogik
                 const filtered = mappedProperties.filter((property: PropertyListing) => {
-                    // Helligkeit (brightnessLevel[0] ist Minimum)
-                    if (brightnessLevel[0] > 0 && parseInt(property.brightnessScore) < brightnessLevel[0]) {
+                    if (brightnessLevel[0] > 0 && property.brightnessScore < brightnessLevel[0]) {
                         console.log(property.brightnessScore, brightnessLevel[0])
                         return false
                     }
@@ -142,8 +121,8 @@ export function PropertyListings() {
                         return false
                     }
                     // Sauna
-                    if (selectedSaunaType && property.saunaType !== selectedSaunaType) {
-                        console.log(property.saunaType)
+                    if (bathFeatures && property.bathFeature !== bathFeatures) {
+                        console.log(property.bathFeature)
                         return false
                     }
                     if (!aiQuery) {
@@ -168,7 +147,7 @@ export function PropertyListings() {
         selectedKitchenColor,
         selectedBathroomColor,
         selectedFloorMaterial,
-        selectedSaunaType
+        bathFeatures
     ])
 
 
@@ -226,15 +205,6 @@ export function PropertyListings() {
         {name: "Unbekannt", value: "unknown"},
     ]
 
-    const saunaTypes = [
-        {name: "Finnische Sauna", value: "Finnische Sauna"},
-        {name: "Bio-Sauna", value: "Bio-Sauna"},
-        {name: "Infrarot-Sauna", value: "Infrarot-Sauna"},
-        {name: "Dampfsauna", value: "Dampfsauna"},
-        {name: "Sanarium", value: "Sanarium"},
-        {name: "Textilsauna", value: "Textilsauna"},
-        {name: "Unbekannt", value: "unknown"},
-    ]
 
     return (
         <div className="min-h-screen bg-background">
@@ -262,7 +232,7 @@ export function PropertyListings() {
             </header>
 
             {/* AI Search Section */}
-            <section className=" bg-gradient-to-b from-muted/30 to-background mt-40">
+            <section  ref={searchSectionRef} className=" bg-gradient-to-b from-muted/30 to-background mt-40">
                 <div className="container mx-auto px-4 py-6">
                     <div className="max-w-4xl mx-auto space-y-6">
                         <div className="text-center space-y-8">
@@ -291,7 +261,8 @@ export function PropertyListings() {
                                         onChange={(e) => setAiQuery(e.target.value)}
                                         className="border-0 bg-transparent text-base h-12 focus-visible:ring-0 focus-visible:ring-offset-0"
                                     />
-                                    <Button onClick={handleSearch} disabled={!aiQuery} size="lg" className="ai-gradient text-white flex-shrink-0 cursor-pointer">
+                                    <Button onClick={handleSearch} disabled={!aiQuery} size="lg"
+                                            className="ai-gradient text-white flex-shrink-0 cursor-pointer">
                                         <Search className="w-5 h-5 mr-2"/>
                                         Suchen
                                     </Button>
@@ -546,40 +517,91 @@ export function PropertyListings() {
                                 </Popover>
 
                                 {/* Sauna Filter */}
+
                                 <Popover>
                                     <PopoverTrigger asChild>
                                         <Button
                                             variant="outline"
                                             className="gap-2 hover:text-border-primary/50 hover:border-primary/50 hover:bg-primary/5 transition-colors bg-transparent"
                                         >
-                                            <Flame className="w-4 h-4 text-red-500"/>
-                                            Sauna
-                                            {selectedSaunaType && (
-                                                <Badge variant="secondary" className="ml-1 h-5 px-1.5">
-                                                    {saunaTypes.find((s) => s.value === selectedSaunaType)?.name}
-                                                </Badge>
-                                            )}
+                                            <Wind className="w-4 h-4 text-primary"/>
+                                            <span className="font-medium">Badausstattung</span>
+
+                                            {bathFeatures &&
+                                                <>
+                                                    <div className="flex items-center gap-1.5">
+                                                        {[bathFeatures].slice(0, 2).map((feature) => (
+                                                            <Badge
+                                                                key={feature}
+                                                                variant="secondary"
+                                                                className="h-5 px-2 text-xs font-medium bg-primary/10 text-primary border-primary/20 hover:bg-primary/15"
+                                                            >
+                                                                {feature}
+                                                            </Badge>
+                                                        ))}
+                                                    </div>
+                                                </>}
+
                                         </Button>
                                     </PopoverTrigger>
-                                    <PopoverContent className="w-80">
-                                        <div className="space-y-3">
-                                            <label className="text-sm font-medium">Wähle die Sauna-Art</label>
-                                            <div className="grid grid-cols-2 gap-2">
-                                                {saunaTypes.map((sauna) => (
-                                                    <button
-                                                        key={sauna.value}
-                                                        onClick={() => setSelectedSaunaType(selectedSaunaType === sauna.value ? "" : sauna.value)}
-                                                        className={`p-3 rounded-lg border-2 transition-all text-sm font-medium ${
-                                                            selectedSaunaType === sauna.value
-                                                                ? "border-primary bg-primary/5 text-primary"
-                                                                : "border-border hover:border-primary/50 hover:bg-muted"
-                                                        }`}
-                                                    >
-                                                        {sauna.name}
-                                                    </button>
-                                                ))}
+
+                                    <PopoverContent className="w-80 p-0" align="start">
+                                        <div className="p-4 border-b border-border">
+                                            <div className="flex items-center justify-between">
+                                                <div>
+                                                    <h4 className="font-semibold text-sm text-foreground">Badausstattung</h4>
+                                                    <p className="text-xs text-muted-foreground mt-0.5">Wählen Sie die
+                                                        gewünschten Merkmale</p>
+                                                </div>
+                                                <Button
+                                                    variant="ghost"
+                                                    size="sm"
+                                                    onClick={() => setBathFeatures("")}
+                                                    className="h-8 px-2 text-xs text-muted-foreground"
+                                                >
+                                                    Zurücksetzen
+                                                </Button>
+
                                             </div>
                                         </div>
+
+                                        <div className="p-2 max-h-[320px] overflow-y-auto">
+                                            {BATH_FEATURES.map((feature) => {
+                                                const Icon = feature.icon
+                                                const isChecked = bathFeatures === feature.label
+
+                                                return (
+                                                    <div
+                                                        key={feature.label}
+                                                        className={`${isChecked ? "bg-foreground/10" : ""} flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-foreground/5 transition-colors cursor-pointer group`}
+                                                        onClick={() => toggleFeature(feature.label)}
+                                                    >
+                                                        <Checkbox
+                                                            id={`bath-${feature.label}`}
+                                                            checked={isChecked}
+                                                            onCheckedChange={() => toggleFeature(feature.label)}
+                                                            className="data-[state=checked]:bg-primary data-[state=checked]:border-primary"
+                                                        />
+                                                        <Icon
+                                                            className="w-4 h-4 text-muted-foreground group-hover:text-primary transition-colors"/>
+                                                        <label
+                                                            htmlFor={`bath-${feature.label}`}
+                                                            className="text-sm font-medium text-foreground cursor-pointer flex-1 select-none"
+                                                        >
+                                                            {feature.label}
+                                                        </label>
+                                                    </div>
+                                                )
+                                            })}
+                                        </div>
+
+                                        {[bathFeatures].length > 0 && (
+                                            <div className="p-3 border-t border-border bg-muted/30">
+                                                <p className="text-xs text-muted-foreground">
+                                                    {[bathFeatures].length} {[bathFeatures].length === 1 ? "Merkmal" : "Merkmale"} ausgewählt
+                                                </p>
+                                            </div>
+                                        )}
                                     </PopoverContent>
                                 </Popover>
 
@@ -595,7 +617,8 @@ export function PropertyListings() {
             </section>
 
             {/* Results */}
-            <section ref={searchSectionRef} className={`container mx-auto px-4 lg:px-16 xl:px-24 py-4 border-t border-border  ${!searchStarted ? "invisible" : ""}`}>
+            <section
+                     className={`container mx-auto px-4 lg:px-16 xl:px-24 py-4 border-t border-border min-h-[500px] ${!searchStarted ? "invisible" : ""}`}>
                 <div className="flex items-center justify-between mb-3">
                     <div>
                         <h3 className="text-2xl font-bold">Verfügbare Immobilien</h3>
@@ -662,8 +685,9 @@ export function PropertyListings() {
                                         <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
                                     {property.bathroomTiles !== "unknown" &&
                                         <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
-                                    {property.saunaType !== "unknown" &&
-                                        <Badge variant="outline">Sauna: {property.saunaType}</Badge>}
+                                    {property.bathFeature &&
+                                        <Badge variant="outline">Fenster im
+                                            Badausstattung: {property.bathFeature}</Badge>}
                                 </div>
 
                                 <Button className="w-full">Details ansehen</Button>

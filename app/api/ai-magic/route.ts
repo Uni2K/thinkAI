@@ -22,9 +22,11 @@ type Listing = {
 
 type ImageAnalysis = {
     floorType: string;
-    brightnessCategory: string;
-    brightnessScore: number; // 0-100
-    confidence: number; // 0-1
+    brightnessScore: number,
+    facadeColor: string,
+    kitchenColor: string,
+    bathroomColor: string,
+    saunaType: string,
     notes?: string;
 };
 
@@ -55,21 +57,57 @@ async function downloadImage(url: string, idx: number): Promise<string> {
 
 // Azure OpenAI REST API Call
 async function analyzeImage(imageUrl: string): Promise<ImageAnalysis> {
-    const prompt = `
-Analysiere das Foto einer Wohnung für:
-1. Bodenart (z.B. Parkett, Laminat, Fliesen, Teppich, Beton, Vinyl, Mischform).
-2. Helligkeitseindruck (dunkel, mittel, hell, sehr hell) basierend auf wahrgenommener natürlichen + künstlichen Lichtquellen.
-3. Skaliere Helligkeit 0-100 (0=sehr dunkel, 100=extrem hell).
-4. Vertrauen 0-1.
-Antworte NUR als kompaktes JSON:
+    const prompt= `
+Analysiere das Bild eines Immobilieninserats und gib die Ergebnisse als kompaktes, strukturiertes JSON zurück.
+
+Bildkontext:
+Das Bild wird innerhalb dieses Prompts übermittelt. Es zeigt entweder das Innere, das Äußere oder den Grundriss eines Immobilieninserats.
+
+Analysiere folgende visuelle Merkmale (sofern erkennbar):
+
+1. **Bodenart** 
+   Wähle ausschließlich eine der folgenden Optionen: 
+   "Parkett", "Laminat", "Fliesen", "Teppich", "Holzdielen", "Vinyl", "Naturstein", "Beton", "unknown"
+
+2. **Helligkeit** 
+     Bestimme die Helligkeit abhängig vom Bildtyp:
+   - Bei Innenaufnahmen: Schätze die wahrgenommene Helligkeit der Wohnung basierend auf Lichtverhältnissen im Innenraum.
+   - Bei Außenaufnahmen: Beurteile die Helligkeit anhand der Anzahl, Größe und Position der Fenster.
+   - Bei Grundrissen: Setze den Wert auf -1.
+   Skaliere die Helligkeit auf einer Skala von 0 bis 100. 
+   (0 = sehr dunkel, 100 = extrem hell)
+
+3. **Farbe der Außenfassade** 
+   Falls die Außenfassede sichtbar und erkennbar ist, wähle eine der folgenden Farben **ausschließlich auf Deutsch**: 
+   "weiß", "beige", "grau", "schwarz", "blau", "rot", "gelb", "grün", "unknown"
+
+4. **Küchenfarbe** 
+   Dominante Farbe der Küchenwände (falls sichtbar) **ausschließlich auf Deutsch**: 
+   "weiß", "beige", "grau", "schwarz", "blau", "rot", "gelb", "grün", "unknown"
+
+5. **Badfliesenfarbe** 
+   Dominante Farbe der Fliesen im Badezimmer (falls sichtbar) **ausschließlich auf Deutsch**: 
+   "weiß", "beige", "grau", "schwarz", "blau", "rot", "gelb", "grün", "unknown"
+
+6. **Sauna** 
+   Falls erkennbar, wähle eine der folgenden Optionen: 
+   "Finnische Sauna", "Bio-Sauna", "Infrarot-Sauna", "Dampfsauna", "Sanarium", "Textilsauna", "unknown"
+
+Gib die Antwort ausschließlich im folgenden kompakten JSON-Format zurück:
+
 {
- "floorType": "...",
- "brightnessCategory": "...",
- "brightnessScore": <number>,
- "confidence": <number>,
- "notes": "kurze optionale Bemerkung"
+  "floorType": "...",
+  "brightnessScore": <number>,
+  "facadeColor": "...",
+  "kitchenColor": "...",
+  "bathroomColor": "...",
+  "saunaType": "..."
 }
-Wenn unsicher: floorType="unknown".
+
+Hinweise:
+- Verwende "unknown", wenn ein Merkmal nicht erkennbar oder nicht relevant ist.
+- Beschreibe ausschließlich visuell wahrnehmbare Eigenschaften – keine technischen oder textbasierten Angaben.
+- Gib keine zusätzlichen Erklärungen, Kommentare oder Formatierungen zurück – nur das JSON-Objekt.
 `;
 
     const body = {
@@ -116,38 +154,52 @@ Wenn unsicher: floorType="unknown".
             // content ist bereits ein Objekt
             return {
                 floorType: content.floorType ?? 'unknown',
-                brightnessCategory: content.brightnessCategory ?? 'unknown',
                 brightnessScore: Number(content.brightnessScore) || 0,
-                confidence: Number(content.confidence) || 0,
-                notes: content.notes,
+                facadeColor: content.facadeColor ?? 'unknown',
+                kitchenColor: content.kitchenColor ?? 'unknown',
+                bathroomColor: content.bathroomColor ?? 'unknown',
+                saunaType: content.saunaType ?? 'unknown',
+                notes: content.notes
             };
         } else if (typeof content === "string") {
             // Fallback: content ist ein JSON-String
             try {
-                const parsed = JSON.parse(content);
+                const cleaned = content
+                    .replace(/^```json/, '')
+                    .replace(/^```/, '')
+                    .replace(/```$/, '')
+                    .trim();
+
+                const parsed = JSON.parse(cleaned);
                 return {
                     floorType: parsed.floorType ?? 'unknown',
-                    brightnessCategory: parsed.brightnessCategory ?? 'unknown',
                     brightnessScore: Number(parsed.brightnessScore) || 0,
-                    confidence: Number(parsed.confidence) || 0,
-                    notes: parsed.notes,
+                    facadeColor: parsed.facadeColor ?? 'unknown',
+                    kitchenColor: parsed.kitchenColor ?? 'unknown',
+                    bathroomColor: parsed.bathroomColor ?? 'unknown',
+                    saunaType: parsed.saunaType ?? 'unknown',
+                    notes: parsed.notes
                 };
             } catch (e) {
                 console.error("Parse-Fehler:", e, "Antwort:", content);
                 return {
                     floorType: 'unknown',
-                    brightnessCategory: 'unknown',
                     brightnessScore: 0,
-                    confidence: 0,
+                    facadeColor: 'unknown',
+                    kitchenColor:  'unknown',
+                    bathroomColor: 'unknown',
+                    saunaType:  'unknown',
                     notes: 'ParseError',
                 };
             }
         } else {
             return {
                 floorType: 'unknown',
-                brightnessCategory: 'unknown',
                 brightnessScore: 0,
-                confidence: 0,
+                facadeColor: 'unknown',
+                kitchenColor:  'unknown',
+                bathroomColor: 'unknown',
+                saunaType:  'unknown',
                 notes: 'NoContent',
             };
         }
@@ -155,9 +207,11 @@ Wenn unsicher: floorType="unknown".
         console.error("Axios-Fehler beim Aufruf der OpenAI-API:", e?.message, e?.code, e?.response?.data);
         return {
             floorType: 'unknown',
-            brightnessCategory: 'unknown',
             brightnessScore: 0,
-            confidence: 0,
+            facadeColor: 'unknown',
+            kitchenColor:  'unknown',
+            bathroomColor: 'unknown',
+            saunaType:  'unknown',
             notes: 'Error: ' + (e?.message || 'axios error'),
         };
     }
@@ -232,9 +286,11 @@ async function analyzeListing(listing: Listing): Promise<Listing> {
                 console.log(e)
                 return {
                     floorType: 'unknown',
-                    brightnessCategory: 'unknown',
                     brightnessScore: 0,
-                    confidence: 0,
+                    facadeColor: 'unknown',
+                    kitchenColor:  'unknown',
+                    bathroomColor: 'unknown',
+                    saunaType:  'unknown',
                     notes: 'Error: ' + (e as Error).message,
                 };
             }
@@ -249,18 +305,36 @@ async function analyzeListing(listing: Listing): Promise<Listing> {
             floorCounts[r.floorType] = (floorCounts[r.floorType] || 0) + 1;
         }
     });
-    const dominantFloor =
-        Object.entries(floorCounts).sort((a, b) => b[1] - a[1])[0]?.[0] || 'unknown';
     const avgBrightness =
         results.reduce((sum, r) => sum + (r.brightnessScore || 0), 0) /
         (results.length || 1);
 
+    // Helper function to find dominant value for a given key
+    function getDominantValue(key: keyof typeof results[0]): string {
+        const counts = results
+            .map(r => r[key])
+            .filter(v => v !== 'unknown' && v !== undefined)
+            .reduce((acc: Record<string, number>, val) => {
+                acc[val] = (acc[val] || 0) + 1;
+                return acc;
+            }, {});
+
+        if (Object.keys(counts).length === 0) {
+            return 'unknown';
+        }
+
+        return Object.entries(counts).reduce((a, b) => b[1] > a[1] ? b : a)[0];
+    }
+
     return {
         ...listing,
         ai: {
-            dominantFloor,
-            avgBrightness: Math.round(avgBrightness),
-            perImage: results,
+            floorType: getDominantValue('floorType'),
+            brightness: Math.round(avgBrightness),
+            exteriorColor: getDominantValue('facadeColor'),
+            kitchenColor: getDominantValue('kitchenColor'),
+            bathroomTiles: getDominantValue('bathroomColor'),
+            saunaType: getDominantValue('saunaType'),
             analyzedAt: new Date().toISOString(),
         },
     };

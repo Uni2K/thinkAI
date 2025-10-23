@@ -629,7 +629,7 @@ export function PropertyListings() {
                 {/* Property Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     {properties.map((property) => (
-                        <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow group p-0">
+                        <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow group p-0 flex flex-col">
                             <div className="relative aspect-square overflow-hidden">
                                 {failedImages.has(property.id) || !property.image.startsWith('http') ? (
                                     <HousePlaceholder/>
@@ -655,42 +655,44 @@ export function PropertyListings() {
                                     {property.brightness}
                                 </Badge>
                             </div>
-                            <CardContent className="p-3 space-y-2">
-                                <div>
-                                    <h4 className="font-medium text-sm mb-1 line-clamp-2 leading-tight">{property.title}</h4>
-                                    <div className="flex items-center text-xs text-muted-foreground">
-                                        <MapPin className="w-3 h-3 mr-1"/>
-                                        {property.location}
+                            <CardContent className="p-3 flex flex-col h-full">
+                                <div className="flex-1 space-y-2">
+                                    <div>
+                                        <h4 className="font-medium text-sm mb-1 line-clamp-2 leading-tight">{property.title}</h4>
+                                        <div className="flex items-center text-xs text-muted-foreground">
+                                            <MapPin className="w-3 h-3 mr-1"/>
+                                            {property.location}
+                                        </div>
+                                    </div>
+
+                                    <div className="flex items-center justify-between">
+                                        <div className="flex items-center gap-1 text-lg font-bold">
+                                            <Euro className="w-4 h-4"/>
+                                            {property.price.toLocaleString("de-DE")}
+                                        </div>
+                                        <div className="flex items-center gap-1 text-muted-foreground">
+                                            <Maximize2 className="w-4 h-4"/>
+                                            {property.size} m²
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-wrap gap-2">
+                                        <Badge variant="outline">{property.rooms} Zimmer</Badge>
+                                        {property.floorType !== "unknown" &&
+                                            <Badge variant="outline">Boden: {property.floorType}</Badge>}
+                                        {property.exteriorColor !== "unknown" &&
+                                            <Badge variant="outline">Fassade: {property.exteriorColor}</Badge>}
+                                        {property.kitchenColor !== "unknown" &&
+                                            <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
+                                        {property.bathroomTiles !== "unknown" &&
+                                            <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
+                                        {property.bathFeature !== "unknown" &&
+                                            <Badge variant="outline">Fenster im
+                                                Badausstattung: {property.bathFeature}</Badge>}
                                     </div>
                                 </div>
 
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-1 text-lg font-bold">
-                                        <Euro className="w-4 h-4"/>
-                                        {property.price.toLocaleString("de-DE")}
-                                    </div>
-                                    <div className="flex items-center gap-1 text-muted-foreground">
-                                        <Maximize2 className="w-4 h-4"/>
-                                        {property.size} m²
-                                    </div>
-                                </div>
-
-                                <div className="flex flex-wrap gap-2">
-                                    <Badge variant="outline">{property.rooms} Zimmer</Badge>
-                                    {property.floorType !== "unknown" &&
-                                        <Badge variant="outline">Boden: {property.floorType}</Badge>}
-                                    {property.exteriorColor !== "unknown" &&
-                                        <Badge variant="outline">Fassade: {property.exteriorColor}</Badge>}
-                                    {property.kitchenColor !== "unknown" &&
-                                        <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
-                                    {property.bathroomTiles !== "unknown" &&
-                                        <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
-                                    {property.bathFeature &&
-                                        <Badge variant="outline">Fenster im
-                                            Badausstattung: {property.bathFeature}</Badge>}
-                                </div>
-
-                                <Button className="w-full">Details ansehen</Button>
+                                <Button className="w-full mt-auto">Details ansehen</Button>
                             </CardContent>
                         </Card>
                     ))}

@@ -692,7 +692,13 @@ export function PropertyListings() {
                                     </div>
                                 </div>
 
-                                <Button className="w-full mt-auto">Details ansehen</Button>
+                                <Button 
+                                    className="w-full mt-auto cursor-pointer" 
+                                    onClick={() => property.url && window.open(property.url, '_blank')}
+                                    disabled={!property.url}
+                                >
+                                    Details ansehen
+                                </Button>
                             </CardContent>
                         </Card>
                     ))}

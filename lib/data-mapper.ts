@@ -22,6 +22,9 @@ interface RefinedPropertyData {
         bathroomTiles?: string;
         bathFeature?: string
     };
+    platforms?: {
+      url?: string;
+    }[];
 }
 
 export interface PropertyListing {
@@ -39,6 +42,7 @@ export interface PropertyListing {
     kitchenColor: string;
     bathroomTiles: string;
     bathFeature: string;
+    url?: string;
 }
 
 export function mapRefinedDataToProperties(refinedData: RefinedPropertyData[]): PropertyListing[] {
@@ -66,6 +70,7 @@ export function mapRefinedDataToProperties(refinedData: RefinedPropertyData[]): 
             kitchenColor: aiData.kitchenColor || "unknown",
             bathroomTiles: aiData.bathroomTiles || "unknown",
             bathFeature: aiData.bathFeature || "unknown",
+            url: item.platforms?.[0]?.url || undefined,
         };
     });
 }

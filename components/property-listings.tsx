@@ -679,16 +679,42 @@ export function PropertyListings() {
                                     <div className="flex flex-wrap gap-2">
                                         <Badge variant="outline">{property.rooms} Zimmer</Badge>
                                         {property.floorType !== "unknown" &&
-                                            <Badge variant="outline">Boden: {property.floorType}</Badge>}
+                                            <Badge variant="outline">Boden: {property.floorType.charAt(0).toUpperCase() + property.floorType.slice(1)}</Badge>}
                                         {property.exteriorColor !== "unknown" &&
-                                            <Badge variant="outline">Fassade: {property.exteriorColor}</Badge>}
+                                            <Badge variant="outline" className="flex items-center gap-1">
+                                                Fassade: {property.exteriorColor.charAt(0).toUpperCase() + property.exteriorColor.slice(1)}
+                                                <div
+                                                    className="w-2 h-2 rounded-full border"
+                                                    style={{
+                                                        backgroundColor: colors.find((c) => c.value === property.exteriorColor)?.hex,
+                                                        borderColor: "#576582ff" ,
+                                                    }}
+                                                />
+                                            </Badge>}
                                         {property.kitchenColor !== "unknown" &&
-                                            <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
+                                            <Badge variant="outline" className="flex items-center gap-1">
+                                                Küche: {property.kitchenColor.charAt(0).toUpperCase() + property.kitchenColor.slice(1)}
+                                                <div
+                                                    className="w-2 h-2 rounded-full border"
+                                                    style={{
+                                                        backgroundColor: colors.find((c) => c.value === property.kitchenColor)?.hex,
+                                                        borderColor: "#576582ff",
+                                                    }}
+                                                />
+                                            </Badge>}
                                         {property.bathroomTiles !== "unknown" &&
-                                            <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
+                                            <Badge variant="outline" className="flex items-center gap-1">
+                                                Bad: {property.bathroomTiles.charAt(0).toUpperCase() + property.bathroomTiles.slice(1)}
+                                                <div
+                                                    className="w-2 h-2 rounded-full border"
+                                                    style={{
+                                                        backgroundColor: colors.find((c) => c.value === property.bathroomTiles)?.hex,
+                                                        borderColor: "#576582ff",
+                                                    }}
+                                                />
+                                            </Badge>}
                                         {property.bathFeature !== "unknown" &&
-                                            <Badge variant="outline">Fenster im
-                                                Badausstattung: {property.bathFeature}</Badge>}
+                                            <Badge variant="outline">Badausstattung: {property.bathFeature.charAt(0).toUpperCase() + property.bathFeature.slice(1)}</Badge>}
                                     </div>
                                 </div>
 

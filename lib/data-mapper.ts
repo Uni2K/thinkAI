@@ -75,7 +75,8 @@ export function mapRefinedDataToProperties(refinedData: RefinedPropertyData[]): 
     });
 }
 
-function convertBrightnessScoreToLabel(score: number): string {
+function
+convertBrightnessScoreToLabel(score: number): string {
     if (score >= 80) return "Sehr hell";
     if (score >= 60) return "Hell";
     if (score >= 40) return "Mittel";

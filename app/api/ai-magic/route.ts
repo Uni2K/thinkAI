@@ -26,7 +26,7 @@ type ImageAnalysis = {
     facadeColor: string,
     kitchenColor: string,
     bathroomColor: string,
-    saunaType: string,
+    bathFeature: string,
     notes?: string;
 };
 
@@ -57,7 +57,7 @@ async function downloadImage(url: string, idx: number): Promise<string> {
 
 // Azure OpenAI REST API Call
 async function analyzeImage(imageUrl: string): Promise<ImageAnalysis> {
-    const prompt= `
+    const prompt = `
 Analysiere das Bild eines Immobilieninserats und gib die Ergebnisse als kompaktes, strukturiertes JSON zurück.
 
 Bildkontext:
@@ -89,9 +89,9 @@ Analysiere folgende visuelle Merkmale (sofern erkennbar):
    Dominante Farbe der Fliesen im Badezimmer (falls sichtbar) **ausschließlich auf Deutsch**: 
    "weiß", "beige", "grau", "schwarz", "blau", "rot", "gelb", "grün", "unknown"
 
-6. **Sauna** 
-   Falls erkennbar, wähle eine der folgenden Optionen: 
-   "Finnische Sauna", "Bio-Sauna", "Infrarot-Sauna", "Dampfsauna", "Sanarium", "Textilsauna", "unknown"
+6. **bathFeature** 
+   Erkenne, ob mindestens eines der folgenden Merkmale vorhanden ist 
+    "Fenster", "Tageslicht", "Badewanne", "Dusche", "Ebenerdige Dusche", "Doppelwaschbecken", "Handtuchheizung", "Gäste-WC"
 
 Gib die Antwort ausschließlich im folgenden kompakten JSON-Format zurück:
 
@@ -101,7 +101,7 @@ Gib die Antwort ausschließlich im folgenden kompakten JSON-Format zurück:
   "facadeColor": "...",
   "kitchenColor": "...",
   "bathroomColor": "...",
-  "saunaType": "..."
+  "bathFeature": "..."
 }
 
 Hinweise:
@@ -124,15 +124,15 @@ Hinweise:
             {
                 role: "user",
                 content: [
-                    { type: "text", text: prompt },
-                    { type: "image_url", image_url: { url: imageUrl } }
+                    {type: "text", text: prompt},
+                    {type: "image_url", image_url: {url: imageUrl}}
                 ]
             }
         ],
         temperature: 0.2,
         top_p: 0.95,
         max_tokens: 512,
-       // response_format: { type: "json_object" }
+        // response_format: { type: "json_object" }
     };
 
     try {
@@ -158,7 +158,7 @@ Hinweise:
                 facadeColor: content.facadeColor ?? 'unknown',
                 kitchenColor: content.kitchenColor ?? 'unknown',
                 bathroomColor: content.bathroomColor ?? 'unknown',
-                saunaType: content.saunaType ?? 'unknown',
+                bathFeature: content.bathFeature ?? 'unknown',
                 notes: content.notes
             };
         } else if (typeof content === "string") {
@@ -177,7 +177,7 @@ Hinweise:
                     facadeColor: parsed.facadeColor ?? 'unknown',
                     kitchenColor: parsed.kitchenColor ?? 'unknown',
                     bathroomColor: parsed.bathroomColor ?? 'unknown',
-                    saunaType: parsed.saunaType ?? 'unknown',
+                    bathFeature: parsed.bathFeature ?? 'unknown',
                     notes: parsed.notes
                 };
             } catch (e) {
@@ -186,9 +186,9 @@ Hinweise:
                     floorType: 'unknown',
                     brightnessScore: 0,
                     facadeColor: 'unknown',
-                    kitchenColor:  'unknown',
+                    kitchenColor: 'unknown',
                     bathroomColor: 'unknown',
-                    saunaType:  'unknown',
+                    bathFeature: 'unknown',
                     notes: 'ParseError',
                 };
             }
@@ -197,9 +197,9 @@ Hinweise:
                 floorType: 'unknown',
                 brightnessScore: 0,
                 facadeColor: 'unknown',
-                kitchenColor:  'unknown',
+                kitchenColor: 'unknown',
                 bathroomColor: 'unknown',
-                saunaType:  'unknown',
+                bathFeature: 'unknown',
                 notes: 'NoContent',
             };
         }
@@ -209,9 +209,9 @@ Hinweise:
             floorType: 'unknown',
             brightnessScore: 0,
             facadeColor: 'unknown',
-            kitchenColor:  'unknown',
+            kitchenColor: 'unknown',
             bathroomColor: 'unknown',
-            saunaType:  'unknown',
+            bathFeature: 'unknown',
             notes: 'Error: ' + (e?.message || 'axios error'),
         };
     }
@@ -275,22 +275,24 @@ async function analyzeListing(listing: Listing): Promise<Listing> {
     if (!images.length) return {...listing, _analysis: []};
     const results: ImageAnalysis[] = [];
 
-    for (let i = 0; i < Math.min(20, images.length); i++) {
+    for (let i = 0; i < Math.min(5, images.length); i++) {
         const imgUrl = images[i];
         const attempt = async (): Promise<ImageAnalysis> => {
             try {
                 // Optional: lokales Caching erzwingen (auskommentiert, falls nicht notwendig)
                 //await downloadImage(imgUrl, i);
-                return await analyzeImage(imgUrl);
+                const result= await analyzeImage(imgUrl);
+                console.log(result);
+                return result
             } catch (e) {
                 console.log(e)
                 return {
                     floorType: 'unknown',
                     brightnessScore: 0,
                     facadeColor: 'unknown',
-                    kitchenColor:  'unknown',
+                    kitchenColor: 'unknown',
                     bathroomColor: 'unknown',
-                    saunaType:  'unknown',
+                    bathFeature: 'unknown',
                     notes: 'Error: ' + (e as Error).message,
                 };
             }
@@ -334,7 +336,7 @@ async function analyzeListing(listing: Listing): Promise<Listing> {
             exteriorColor: getDominantValue('facadeColor'),
             kitchenColor: getDominantValue('kitchenColor'),
             bathroomTiles: getDominantValue('bathroomColor'),
-            saunaType: getDominantValue('saunaType'),
+            bathFeature: getDominantValue('bathFeature'),
             analyzedAt: new Date().toISOString(),
         },
     };
@@ -345,7 +347,8 @@ async function refineAll() {
     await ensureCacheDir();
 
     const out: Listing[] = [];
-    for (const l of listings.slice(0, 2)) {
+    for (const l of listings) {
+        console.log("Analysiere Listing ID:", l.id);
         const refined = await analyzeListing(l);
         out.push(refined);
     }

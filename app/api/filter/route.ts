@@ -23,7 +23,7 @@ Mögliche Filter (ausschließlich, nehme keine anderen):
 1. floorType 
    "Parkett", "Laminat", "Fliesen", "Teppich", "Holzdielen", "Vinyl", "Naturstein", "Beton", 
 
-2.  brightnessScore  als string
+2.  brightnessScore  als string, bitte realistische einordnung, z.B. hell=70, sehr hell=80, dunkel=30
     "0" = sehr dunkel,
     "100" = extrem hell  
 

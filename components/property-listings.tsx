@@ -120,8 +120,7 @@ export function PropertyListings() {
                         console.log(property.floorType)
                         return false
                     }
-                    // Sauna
-                    if (bathFeatures && property.bathFeature !== bathFeatures) {
+                    if (bathFeatures && !property.bathFeature?.includes(bathFeatures)) {
                         console.log(property.bathFeature)
                         return false
                     }
@@ -232,7 +231,7 @@ export function PropertyListings() {
             </header>
 
             {/* AI Search Section */}
-            <section  ref={searchSectionRef} className=" bg-gradient-to-b from-muted/30 to-background mt-40">
+            <section ref={searchSectionRef} className=" bg-gradient-to-b from-muted/30 to-background mt-40">
                 <div className="container mx-auto px-4 py-6">
                     <div className="max-w-4xl mx-auto space-y-6">
                         <div className="text-center space-y-8">
@@ -259,7 +258,7 @@ export function PropertyListings() {
                                         placeholder="Ich suche eine Wohnung in München"
                                         value={aiQuery}
                                         onChange={(e) => setAiQuery(e.target.value)}
-                                        className="border-0 bg-transparent text-base h-12 focus-visible:ring-0 focus-visible:ring-offset-0"
+                                        className="border-0 bg-transparent !text-lg h-12 focus-visible:ring-0 focus-visible:ring-offset-0"
                                     />
                                     <Button onClick={handleSearch} disabled={!aiQuery} size="lg"
                                             className="ai-gradient text-white flex-shrink-0 cursor-pointer">
@@ -618,7 +617,7 @@ export function PropertyListings() {
 
             {/* Results */}
             <section
-                     className={`container mx-auto px-4 lg:px-16 xl:px-24 py-4 border-t border-border min-h-[500px] ${!searchStarted ? "invisible" : ""}`}>
+                className={`container mx-auto px-4 lg:px-16 xl:px-24 py-4 border-t border-border min-h-[500px] ${!searchStarted ? "invisible" : ""}`}>
                 <div className="flex items-center justify-between mb-3">
                     <div>
                         <h3 className="text-2xl font-bold">Verfügbare Immobilien</h3>
@@ -629,7 +628,8 @@ export function PropertyListings() {
                 {/* Property Grid */}
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
                     {properties.map((property) => (
-                        <Card key={property.id} className="overflow-hidden hover:shadow-lg transition-shadow group p-0 flex flex-col">
+                        <Card key={property.id}
+                              className="overflow-hidden hover:shadow-lg transition-shadow group p-0 flex flex-col">
                             <div className="relative aspect-square overflow-hidden">
                                 {failedImages.has(property.id) || !property.image.startsWith('http') ? (
                                     <HousePlaceholder/>
@@ -686,14 +686,11 @@ export function PropertyListings() {
                                             <Badge variant="outline">Küche: {property.kitchenColor}</Badge>}
                                         {property.bathroomTiles !== "unknown" &&
                                             <Badge variant="outline">Bad: {property.bathroomTiles}</Badge>}
-                                        {property.bathFeature !== "unknown" &&
-                                            <Badge variant="outline">Fenster im
-                                                Badausstattung: {property.bathFeature}</Badge>}
                                     </div>
                                 </div>
 
-                                <Button 
-                                    className="w-full mt-auto cursor-pointer" 
+                                <Button
+                                    className="w-full mt-auto cursor-pointer"
                                     onClick={() => property.url && window.open(property.url, '_blank')}
                                     disabled={!property.url}
                                 >
